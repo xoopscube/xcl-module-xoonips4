@@ -12,13 +12,16 @@ function group_list_submit(type,groupid){
 
 <form id="user_groupForm" name="user_groupForm" action="user.php?op=groupRegister" method="post">
 <{$token_ticket}>
-<input type="hidden" id="user_action" name="action" value="init" />
-<table class="outer" cellspacing="1" cellpadding="4">
+<input type="hidden" id="user_action" name="action" value="init">
+<table class="outer">
+	<thead>
 	<tr>
 		<th><{$smarty.const._MD_XOONIPS_LANG_GROUP_NAME}></th>
 		<th><{$smarty.const._MD_XOONIPS_LANG_GROUP_DESCRIPTION}></th>
 		<th><{$smarty.const._MD_XOONIPS_LANG_ACTION}></th>
 	</tr>
+	</thead>
+	<tbody>
 <{if empty($groups)}>
 	<tr>
 		<td class="odd" colspan="3"><{$smarty.const._MD_XOONIPS_MESSAGE_GROUP_EMPTY}></td>
@@ -35,21 +38,21 @@ function group_list_submit(type,groupid){
 				<pre><{$group.description|xoops_escape}></pre>
 			</td>
 			<td width="25%">
-				<a href="user.php?op=groupInfo&groupid=<{$group.groupid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/view.png" alt="<{$smarty.const._VIEW}>" title="<{$smarty.const._VIEW}>" /></a>
+				<a href="user.php?op=groupInfo&groupid=<{$group.groupid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/view.png" alt="<{$smarty.const._VIEW}>" title="<{$smarty.const._VIEW}>"></a>
 				<{if $group.editflag }>
-					<a href="user.php?op=groupEdit&groupid=<{$group.groupid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/edit.png" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>" /></a>
+					<a href="user.php?op=groupEdit&groupid=<{$group.groupid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/edit.png" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>"></a>
 				<{/if}>
 				<{if $group.memberflag }>
-					<a href="user.php?op=groupMember&groupid=<{$group.groupid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/members.png" alt="<{$smarty.const._MD_XOONIPS_LANG_MEMBER}>" title="<{$smarty.const._MD_XOONIPS_LANG_MEMBER}>" style="cursor:pointer" /></a>
+					<a href="user.php?op=groupMember&groupid=<{$group.groupid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/members.png" alt="<{$smarty.const._MD_XOONIPS_LANG_MEMBER}>" title="<{$smarty.const._MD_XOONIPS_LANG_MEMBER}>" style="cursor:pointer"></a>
 				<{/if}>
 				<{if $group.joinflag }>
-					<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/members_join.png" alt="<{$smarty.const._MD_XOONIPS_LANG_GROUP_JOIN}>" title="<{$smarty.const._MD_XOONIPS_LANG_GROUP_JOIN}>" style="cursor:pointer" onclick="group_list_submit('join',<{$group.groupid|xoops_escape}>)" />
+					<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/members_join.png" alt="<{$smarty.const._MD_XOONIPS_LANG_GROUP_JOIN}>" title="<{$smarty.const._MD_XOONIPS_LANG_GROUP_JOIN}>" style="cursor:pointer" onclick="group_list_submit('join',<{$group.groupid|xoops_escape}>)">
 				<{/if}>
 				<{if $group.leaveflag }>
-					<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/members_leave.png" alt="<{$smarty.const._MD_XOONIPS_LANG_GROUP_LEAVE}>" title="<{$smarty.const._MD_XOONIPS_LANG_GROUP_LEAVE}>" style="cursor:pointer" onclick="group_list_submit('leave',<{$group.groupid|xoops_escape}>)" />
+					<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/members_leave.png" alt="<{$smarty.const._MD_XOONIPS_LANG_GROUP_LEAVE}>" title="<{$smarty.const._MD_XOONIPS_LANG_GROUP_LEAVE}>" style="cursor:pointer" onclick="group_list_submit('leave',<{$group.groupid|xoops_escape}>)">
 				<{/if}>
 				<{if $group.deleteflag }>
-					<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>" style="cursor:pointer" onclick="group_list_submit('delete',<{$group.groupid|xoops_escape}>)" />
+					<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>" style="cursor:pointer" onclick="group_list_submit('delete',<{$group.groupid|xoops_escape}>)">
 				<{/if}>
 				<{if $group.activate==$grpNotCertified}><br/>Pending<{elseif $group.activate==$grpOpenRequired}><br/>Open Pending<{elseif $group.activate==$grpCloseRequired}><br/>Close Pending<{elseif $group.activate==$grpDeleteRequired}><br/>Delete Pending<{/if}>
 				<{if !empty($group.userActivate)}><{if $group.userActivate==1}><br/>Join Pending<{elseif $group.userActivate==2}><br/>Leave Pending<{/if}><{/if}>
@@ -57,11 +60,17 @@ function group_list_submit(type,groupid){
 		</tr>
 	<{/foreach}>
 <{/if}>
+	</tbody>
+	<{if $newflag}>
+	<tfoot>
+	<tr>
+		<td colspan="3">
+			<input class="ui-button" type="submit" value="<{$smarty.const._MD_XOONIPS_LANG_NEW_REGISTER}>">
+		</td>
+	</tr>
+	</tfoot>
+	<{/if}>
 </table>
-<{if $newflag }>
-<div style="text-align: center">
-	<input class="formButton" type="submit" value="<{$smarty.const._MD_XOONIPS_LANG_NEW_REGISTER}>" />
-</div>
-<{/if}>
+
 </form>
 <{include file="db:`$dirname`_user_footer.html"}>

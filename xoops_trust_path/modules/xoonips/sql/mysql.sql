@@ -51,9 +51,9 @@ CREATE TABLE `{prefix}_{dirname}_item_type` (
   `released` tinyint(1) unsigned NOT NULL default '0',
   `weight` smallint(3) unsigned NOT NULL default '0',
   `name` varchar(30) NOT NULL,
-  `description` varchar(255) default NULL,
-  `icon` varchar(255) default NULL,
-  `mime_type` varchar(255) default NULL,
+  `description` varchar(191) default NULL,
+  `icon` varchar(191) default NULL,
+  `mime_type` varchar(191) default NULL,
   `template` text default NULL,
   `update_id` int(10) unsigned default NULL,
   PRIMARY KEY (`item_type_id`),
@@ -69,7 +69,7 @@ CREATE TABLE `{prefix}_{dirname}_item_type` (
 CREATE TABLE `{prefix}_{dirname}_data_type` (
   `data_type_id` int(10) unsigned NOT NULL auto_increment,
   `name` varchar(30) NOT NULL,
-  `module` varchar(255) default NULL,
+  `module` varchar(191) default NULL,
   PRIMARY KEY (`data_type_id`)
 ) ENGINE=InnoDB;
 
@@ -84,7 +84,7 @@ CREATE TABLE `{prefix}_{dirname}_view_type` (
   `preselect` tinyint(1) unsigned NOT NULL default '0',
   `multi` tinyint(1) unsigned NOT NULL default '0',
   `name` varchar(30) NOT NULL,
-  `module` varchar(255) default NULL,
+  `module` varchar(191) default NULL,
   PRIMARY KEY (`view_type_id`)
 ) ENGINE=InnoDB;
 
@@ -110,7 +110,7 @@ CREATE TABLE `{prefix}_{dirname}_view_data_relation` (
 
 CREATE TABLE `{prefix}_{dirname}_default_item_field_group` (
   `group_id` int(10) unsigned NOT NULL auto_increment,
-  `name` varchar(255) NOT NULL default '',
+  `name` varchar(191) NOT NULL default '',
   `xml` varchar(30) NOT NULL default '',
   `weight` smallint(3) unsigned NOT NULL,
   `occurrence` tinyint(1) unsigned NOT NULL default '0',
@@ -130,7 +130,7 @@ CREATE TABLE `{prefix}_{dirname}_default_item_field_detail` (
   `column_name` varchar(50) NOT NULL default '',
   `group_id` int(10) unsigned NOT NULL default '0',
   `weight` smallint(3) unsigned NOT NULL,
-  `name` varchar(255) NOT NULL default '',
+  `name` varchar(191) NOT NULL default '',
   `xml` varchar(30) NOT NULL default '',
   `view_type_id` int(10) unsigned NOT NULL,
   `data_type_id` int(10) unsigned NOT NULL,
@@ -157,7 +157,7 @@ CREATE TABLE `{prefix}_{dirname}_complement` (
   `complement_id` int(10) unsigned NOT NULL auto_increment,
   `view_type_id` int(10) unsigned NOT NULL default '0',
   `title` varchar(30) NOT NULL default '',
-  `module` varchar(255) default NULL,
+  `module` varchar(191) default NULL,
   PRIMARY KEY (`complement_id`),
   KEY `view_type_id` (`view_type_id`)
 ) ENGINE=InnoDB;
@@ -172,7 +172,7 @@ CREATE TABLE `{prefix}_{dirname}_complement_detail` (
   `complement_detail_id` int(10) unsigned NOT NULL auto_increment,
   `complement_id` int(10) unsigned NOT NULL default '0',
   `code` varchar(30) NOT NULL default '',
-  `title` varchar(255) NOT NULL default '',
+  `title` varchar(191) NOT NULL default '',
   PRIMARY KEY (`complement_detail_id`),
   KEY `complement_id` (`complement_id`, `complement_detail_id`)
 ) ENGINE=InnoDB;
@@ -186,11 +186,11 @@ CREATE TABLE `{prefix}_{dirname}_complement_detail` (
 CREATE TABLE `{prefix}_{dirname}_item_field_value_set` (
   `select_name` varchar(50) NOT NULL default '',
   `title_id` varchar(30) NOT NULL default '0',
-  `title` varchar(255) NOT NULL default '',
+  `title` varchar(191) NOT NULL default '',
   `weight` smallint(3) NOT NULL default '0',
   PRIMARY KEY (`select_name`, `title_id`),
   KEY `select_name` (`select_name`, `weight`)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB;
 
 # --------------------------------------------------------
 
@@ -203,7 +203,7 @@ CREATE TABLE `{prefix}_{dirname}_item_field_group` (
   `preselect` tinyint(1) unsigned NOT NULL default '0',
   `released` tinyint(1) unsigned NOT NULL default '0',
   `item_type_id` int(10) unsigned NOT NULL default '0',
-  `name` varchar(255) NOT NULL default '',
+  `name` varchar(191) NOT NULL default '',
   `xml` varchar(30) NOT NULL default '',
   `weight` smallint(3) unsigned NOT NULL,
   `occurrence` tinyint(1) unsigned NOT NULL default '0',
@@ -228,7 +228,7 @@ CREATE TABLE `{prefix}_{dirname}_item_field_detail` (
   `item_type_id` int(10) unsigned NOT NULL default '0',
   `group_id` int(10) unsigned NOT NULL default '0',
   `weight` smallint(3) unsigned NOT NULL,
-  `name` varchar(255) NOT NULL default '',
+  `name` varchar(191) NOT NULL default '',
   `xml` varchar(30) NOT NULL default '',
   `view_type_id` int(10) unsigned NOT NULL,
   `data_type_id` int(10) unsigned NOT NULL,
@@ -280,10 +280,10 @@ CREATE TABLE `{prefix}_{dirname}_index` (
   `groupid` int(10) unsigned default NULL,
   `open_level` tinyint(2) unsigned NOT NULL default '0',
   `weight` int(10) unsigned NOT NULL default '0',
-  `title` varchar(255) NOT NULL default '',
+  `title` varchar(191) NOT NULL default '',
   `detailed_title` text default NULL,
-  `icon` varchar(255) default NULL,
-  `mime_type` varchar(255) default NULL,
+  `icon` varchar(191) default NULL,
+  `mime_type` varchar(191) default NULL,
   `detailed_description` text default NULL,
   `last_update_date` int(10) unsigned NOT NULL default '0',
   `creation_date` int(10) unsigned NOT NULL default '0',
@@ -351,7 +351,7 @@ CREATE TABLE `{prefix}_{dirname}_item_title` (
   `title` text NOT NULL,
   PRIMARY KEY (`item_id`, `title_id`),
   KEY `item_field_detail_id` (`item_id`, `item_field_detail_id`),
-  KEY `title` (`title`(255))
+  KEY `title` (`title`(191))
 ) ENGINE=InnoDB;
 
 # --------------------------------------------------------
@@ -363,7 +363,7 @@ CREATE TABLE `{prefix}_{dirname}_item_title` (
 CREATE TABLE `{prefix}_{dirname}_item_keyword` (
   `item_id` int(10) unsigned NOT NULL default '0',
   `keyword_id` int(10) unsigned NOT NULL default '0',
-  `keyword` varchar(255) NOT NULL default '',
+  `keyword` varchar(191) NOT NULL default '',
   PRIMARY KEY (`item_id`, `keyword_id`),
   KEY `keyword` (`keyword`)
 ) ENGINE=InnoDB;
@@ -391,13 +391,13 @@ CREATE TABLE `{prefix}_{dirname}_item_file` (
   `item_id` int(10) unsigned NOT NULL default '0',
   `group_id` int(10) unsigned default '0',
   `item_field_detail_id` int(10) unsigned NOT NULL default '0',
-  `original_file_name` varchar(255) default NULL,
-  `mime_type` varchar(255) default NULL,
+  `original_file_name` varchar(191) default NULL,
+  `mime_type` varchar(191) default NULL,
   `file_size` bigint unsigned NOT NULL default '0',
-  `handle_name` varchar(255) default NULL,
-  `caption` varchar(255) default NULL,
+  `handle_name` varchar(191) default NULL,
+  `caption` varchar(191) default NULL,
   `sess_id` varchar(32) default NULL,
-  `search_module_name` varchar(255) default NULL,
+  `search_module_name` varchar(191) default NULL,
   `search_module_version` smallint(5) default NULL,
   `timestamp` int(10) NOT NULL,
   `download_count` int(10) unsigned NOT NULL default '0',
@@ -464,7 +464,7 @@ CREATE TABLE `{prefix}_{dirname}_event_log` (
   `event_type_id` int(10) unsigned NOT NULL default '0',
   `timestamp` int(10) unsigned NOT NULL default '0',
   `exec_uid` int(10) unsigned default NULL,
-  `remote_host` varchar(255) default NULL,
+  `remote_host` varchar(191) default NULL,
   `index_id` int(10) unsigned default NULL,
   `item_id` int(10) unsigned default NULL,
   `file_id` int(10) unsigned default NULL,
@@ -485,7 +485,7 @@ CREATE TABLE `{prefix}_{dirname}_event_log` (
 
 CREATE TABLE `{prefix}_{dirname}_config` (
   `id` int(10) unsigned NOT NULL auto_increment,
-  `name` varchar(255) NOT NULL default '',
+  `name` varchar(191) NOT NULL default '',
   `value` text NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `name` (`name`)
@@ -499,7 +499,7 @@ CREATE TABLE `{prefix}_{dirname}_config` (
 
 CREATE TABLE `{prefix}_{dirname}_item_type_sort` (
   `sort_id` int(10) unsigned NOT NULL auto_increment,
-  `title` varchar(255) NOT NULL default '',
+  `title` varchar(191) NOT NULL default '',
   PRIMARY KEY (`sort_id`)
 ) ENGINE=InnoDB;
 
@@ -524,7 +524,7 @@ CREATE TABLE `{prefix}_{dirname}_item_type_sort_detail` (
 
 CREATE TABLE `{prefix}_{dirname}_item_type_search_condition` (
   `condition_id` int(10) unsigned NOT NULL auto_increment,
-  `title` varchar(255) NOT NULL default '',
+  `title` varchar(191) NOT NULL default '',
   PRIMARY KEY (`condition_id`),
   KEY `title` (`title`)
 ) ENGINE=InnoDB;
@@ -549,7 +549,7 @@ CREATE TABLE `{prefix}_{dirname}_item_type_search_condition_detail` (
 #
 
 CREATE TABLE `{prefix}_{dirname}_oaipmh_resumption_token` (
-  `resumption_token` varchar(255) NOT NULL default '',
+  `resumption_token` varchar(191) NOT NULL default '',
   `metadata_prefix` varchar(30) default NULL,
   `verb` varchar(32) default NULL,
   `args` text,
@@ -558,7 +558,7 @@ CREATE TABLE `{prefix}_{dirname}_oaipmh_resumption_token` (
   `publish_date` int(10) unsigned default NULL,
   `expire_date` int(10) unsigned default NULL,
   PRIMARY KEY  (`resumption_token`)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB;
 
 # --------------------------------------------------------
 
@@ -569,7 +569,7 @@ CREATE TABLE `{prefix}_{dirname}_oaipmh_resumption_token` (
 CREATE TABLE `{prefix}_{dirname}_oaipmh_schema` (
   `schema_id` int(10) unsigned NOT NULL auto_increment,
   `metadata_prefix` varchar(30) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(191) NOT NULL,
   `min_occurences` tinyint(1) unsigned NOT NULL,
   `max_occurences` tinyint(1) unsigned NOT NULL,
   `weight` smallint(3) unsigned NOT NULL,
@@ -598,7 +598,7 @@ CREATE TABLE `{prefix}_{dirname}_oaipmh_schema_link` (
 CREATE TABLE `{prefix}_{dirname}_oaipmh_schema_value_set` (
   `seq_id` int(10) unsigned NOT NULL auto_increment,
   `schema_id` int(10) unsigned NOT NULL default '0',
-  `value` varchar(255) NOT NULL,
+  `value` varchar(191) NOT NULL,
   PRIMARY KEY (`seq_id`),
   KEY `schema` (`schema_id`, `value`)
 ) ENGINE=InnoDB;
@@ -612,8 +612,8 @@ CREATE TABLE `{prefix}_{dirname}_oaipmh_schema_value_set` (
 CREATE TABLE `{prefix}_{dirname}_oaipmh_schema_item_type_link` (
   `schema_id` int(10) unsigned NOT NULL default '0',
   `item_type_id` int(10) unsigned NOT NULL default '0',
-  `group_id` varchar(255) ,
-  `item_field_detail_id` varchar(255) NOT NULL,
+  `group_id` varchar(191) ,
+  `item_field_detail_id` varchar(191) NOT NULL,
   `value` text default NULL,
   PRIMARY KEY (`schema_id`, `item_type_id`, `item_field_detail_id`)
 ) ENGINE=InnoDB;

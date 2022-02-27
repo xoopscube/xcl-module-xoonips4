@@ -6,8 +6,8 @@
 
 ALTER TABLE `{prefix}_groups`
  ADD `activate` tinyint(1) unsigned NOT NULL default '0' AFTER `groupid`,
- ADD `icon` varchar(255) default NULL AFTER `description`,
- ADD `mime_type` varchar(255) default NULL AFTER `icon`,
+ ADD `icon` varchar(191) default NULL AFTER `description`,
+ ADD `mime_type` varchar(191) default NULL AFTER `icon`,
  ADD `is_public` tinyint(1) unsigned NOT NULL default '0' AFTER `mime_type`,
  ADD `can_join` tinyint(1) unsigned NOT NULL default '0' AFTER `is_public`,
  ADD `is_hidden` tinyint(1) unsigned NOT NULL default '0' AFTER `can_join`,

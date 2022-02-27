@@ -1,4 +1,4 @@
-<b><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_TITLE}></b><br />
+<b><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_TITLE}></b><br>
 <script type="text/javascript">
 jQuery.noConflict();
 jQuery(function(){
@@ -69,16 +69,16 @@ function submitPage(index_id, page, orderby, itemcount) {
 }
 </script>
 <table><tr><td width="30%">
-<b><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_INDEX_TREE}></b><br />
+<b><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_INDEX_TREE}></b><br>
 <div id="<{$dirname}>_item_select_treecontrol" style="float: none; clear: both; margin: 0px 0px 3px 0px; padding: 0px;">
 <button class="formButton" id="<{$dirname}>_item_select_open_all" >open all</button>
 <button class="formButton" id="<{$dirname}>_item_select_close_all" >close all</button>
 </div>
 <form id="<{$dirname}>_itemselectsubform" action="index.php?action=Ajax&amp;method=ItemSelect" method="post">
-<input type="hidden" name="op" value="search" />
-<input type="hidden" id="<{$dirname}>_item_select_index_id" name="indexId" value="<{$select_index_id|xoops_escape}>" />
-<input type="hidden" id="<{$dirname}>_callbackid"  name="callbackid" value="<{$callbackid|xoops_escape}>" />
-<input type="hidden" id="<{$dirname}>_callbackvalue" name="callbackvalue" value="" />
+<input type="hidden" name="op" value="search">
+<input type="hidden" id="<{$dirname}>_item_select_index_id" name="indexId" value="<{$select_index_id|xoops_escape}>">
+<input type="hidden" id="<{$dirname}>_callbackid"  name="callbackid" value="<{$callbackid|xoops_escape}>">
+<input type="hidden" id="<{$dirname}>_callbackvalue" name="callbackvalue" value="">
 <div style="margin: 0px; padding: 0px;font-size:80%;" id="<{$dirname}>_item_select_index_tree_tabs">
 <ul>
 <{foreach item=index from=$indexes}>
@@ -99,12 +99,12 @@ function submitPage(index_id, page, orderby, itemcount) {
 <tr>
 <td class="head"><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_TITLE_LABEL}></td>
 <td class="even">
-<input type="text" id="<{$dirname}>_title" name="title"  value="<{$title|xoops_escape}>" size="35" />
-<input type="submit" id="<{$dirname}>_item_select_search_button" name="search_button" value="<{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_SEARCH_BUTTON}>" />
+<input type="text" id="<{$dirname}>_title" name="title"  value="<{$title|xoops_escape}>" size="35">
+<input type="submit" id="<{$dirname}>_item_select_search_button" name="search_button" value="<{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_SEARCH_BUTTON}>">
 </td>
 </tr>
 </table>
-<hr />
+<hr>
 <{if $item_no_label}><span><{$item_no_label|xoops_escape}></span><{/if}>
 <{if $items}>
 	<table width="100%" border="0" cellspacing="5">
@@ -116,7 +116,7 @@ function submitPage(index_id, page, orderby, itemcount) {
    			<option value="<{$key|xoops_escape}>" <{if $key == $orderby}> selected="selected" <{/if}> ><{$item|xoops_escape}></option>
 		<{/foreach}>
 		</select>
-		<input type="hidden" id="<{$dirname}>_order_dir" name="order_dir" value="<{$order_dir|xoops_escape}>" />
+		<input type="hidden" id="<{$dirname}>_order_dir" name="order_dir" value="<{$order_dir|xoops_escape}>">
 		<{if $order_dir == $smarty.const.ASC}>
 			<{$smarty.const._MD_XOONIPS_ITEM_ASCEND}>
 			<a href="#" onclick="submitOrderDir('<{$smarty.const.XOONIPS_DESC}>');return false;"><{$smarty.const._MD_XOONIPS_ITEM_DESCEND}></a>
@@ -182,7 +182,7 @@ function submitPage(index_id, page, orderby, itemcount) {
 	<{foreach key=key item=item from=$items}>
 		<tr class="<{cycle values="even,odd"}>">
 		<td valign="middle">
-		<input type="checkbox" rel="select" name="sel<{$key|xoops_escape}>" value="<{$item.item_id|xoops_escape}>" />
+		<input type="checkbox" rel="select" name="sel<{$key|xoops_escape}>" value="<{$item.item_id|xoops_escape}>">
 		</td>
 		<td>
 		<{$item.html}>
@@ -236,11 +236,11 @@ function submitPage(index_id, page, orderby, itemcount) {
 	</td>
 	</tr>
 	</table>
-	<br />
+	<br>
 
 	<div style="text-align: center;">
-	<input type="button" rel="callback" value="<{$smarty.const._MD_XOONIPS_LABEL_SELECT}>" />
-	<input type="button" rel="close" value="<{$smarty.const._MD_XOONIPS_LABEL_CANCEL}>" />
+	<input type="button" rel="callback" value="<{$smarty.const._MD_XOONIPS_LABEL_SELECT}>">
+	<input type="button" rel="close" value="<{$smarty.const._MD_XOONIPS_LABEL_CANCEL}>">
 	<script language="javascript">
 	jQuery(function(){
 		jQuery(':button[rel=callback]').click(function(){
@@ -257,7 +257,7 @@ function submitPage(index_id, page, orderby, itemcount) {
 	</div>
 <{else}>
 <div style="text-align: center;">
-<input type="button" rel="close" value="<{$smarty.const._MD_XOONIPS_LABEL_CANCEL}>" />
+<input type="button" rel="close" value="<{$smarty.const._MD_XOONIPS_LABEL_CANCEL}>">
 </div>
 <{/if}>
 </form>

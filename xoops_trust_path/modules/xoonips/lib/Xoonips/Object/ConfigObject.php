@@ -16,7 +16,7 @@ class ConfigObject extends AbstractObject
     {
         parent::__construct($dirname);
         $this->initVar('id', XOBJ_DTYPE_INT, null, true);
-        $this->initVar('name', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('name', XOBJ_DTYPE_STRING, '', true, 191);
         $this->initVar('value', XOBJ_DTYPE_TEXT, null, true);
     }
 }

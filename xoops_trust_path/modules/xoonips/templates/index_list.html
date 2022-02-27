@@ -33,30 +33,30 @@ function xoonipsCallback(id, value) {
 <h3><{$smarty.const._MD_XOONIPS_INDEX_EDIT}></h3>
 <{if $error_message}>
 <{foreach item=error_message from=$error_message}>
-  <span style="color: red;"><{$error_message}></span><br />
+  <span style="color: red;"><{$error_message}></span><br>
 <{/foreach}>
-<br />
+<br>
 <{/if}>
   <{foreach item=index from=$index_path}>
   / <a href="editindex.php?index_id=<{$index.index_id|xoops_escape}>"><{$index.html_title|xoops_escape}></a>
-  <{/foreach}><hr />
+  <{/foreach}><hr>
 <{if $limitLabel }>
-<{$limitLabel}>: <{$indexCount}> (max=<{if $indexNumberLimit==0}><{$smarty.const._MD_XOONIPS_LABEL_UNLIMIT}><{else}><{$indexNumberLimit}><{/if}>)<br />
+<{$limitLabel}>: <{$indexCount}> (max=<{if $indexNumberLimit==0}><{$smarty.const._MD_XOONIPS_LABEL_UNLIMIT}><{else}><{$indexNumberLimit}><{/if}>)<br>
 <{/if}>
 <h4><{$smarty.const._MD_XOONIPS_INDEX_TITLE_MODIFY}></h4>
 <form action="editindex.php" method="post" id="<{$dirname}>_modify_form">
-<input type="hidden" id="<{$dirname}>_op" name="op" value="" />
-<input type="hidden" id="<{$dirname}>_url" name="url" value="" />
-<input type="hidden" id="<{$dirname}>_redirect_msg" name="redirect_msg" value="" />
+<input type="hidden" id="<{$dirname}>_op" name="op" value="">
+<input type="hidden" id="<{$dirname}>_url" name="url" value="">
+<input type="hidden" id="<{$dirname}>_redirect_msg" name="redirect_msg" value="">
 <{if $childCount == 0 }>
-<{$smarty.const._MD_XOONIPS_INDEX_NO_INDEX}><br />
+<{$smarty.const._MD_XOONIPS_INDEX_NO_INDEX}><br>
 <{if $indexNumberLimit==0 || $indexCount<$indexNumberLimit}>
-<input id="<{$dirname}>_add_button" class="formButton" type="button" href="editindex.php?op=indexEdit&amp;parent_index_id=<{$xid|xoops_escape}>" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_INDEX_TITLE_ADD}>" />
+<input id="<{$dirname}>_add_button" class="formButton" type="button" href="editindex.php?op=indexEdit&amp;parent_index_id=<{$xid|xoops_escape}>" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_INDEX_TITLE_ADD}>">
 <{/if}>
 <{else}>
 <{$token_ticket}>
-<input type="hidden" name="index_id" value="<{$xid|xoops_escape}>" id="<{$dirname}>_index_id" />
-<input type="hidden" name="sel_index_id" value="" id="<{$dirname}>_sel_index_id" />
+<input type="hidden" name="index_id" value="<{$xid|xoops_escape}>" id="<{$dirname}>_index_id">
+<input type="hidden" name="sel_index_id" value="" id="<{$dirname}>_sel_index_id">
 <table width="100%" class="<{$dirname}>_sortable">
 	<thead>
 	  <tr valign="top">
@@ -69,16 +69,16 @@ function xoonipsCallback(id, value) {
 <{foreach item=index from=$child_indexes}>
   <tr valign="top" class="<{cycle values="even,odd" name="c0" }>">
     <td class="<{$dirname}>_cursor_title">
-    	<input type="hidden" name="indexIds[]" value="<{$index.index_id|xoops_escape}>" />
-    	<input type="hidden" name="weights[]" value="<{$index.weight|xoops_escape}>" />
+    	<input type="hidden" name="indexIds[]" value="<{$index.index_id|xoops_escape}>">
+    	<input type="hidden" name="weights[]" value="<{$index.weight|xoops_escape}>">
         <a href="editindex.php?index_id=<{$index.index_id|xoops_escape}>"><{$index.title|xoops_escape}></a>
     </td>
     <td><pre><{$index.detailed_title|xoops_escape}></pre></td>
     <td>
     	<{if !$index.isLocked}>
-        <a href="indexdescription.php?index_id=<{$index.index_id|xoops_escape}>&back=<{$xid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/edit.png" title="<{$smarty.const._MD_XOONIPS_LABEL_MODIFY}>" alt="<{$smarty.const._MD_XOONIPS_LABEL_MODIFY}>" /></a>
-        <a href="editindex.php?op=indexMove&amp;index_id=<{$index.index_id|xoops_escape}>" rel="<{$mytrustdirname}>Popin"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/folder_move.png" title="<{$smarty.const._MD_XOONIPS_LABEL_MOVE}>" alt="<{$smarty.const._MD_XOONIPS_LABEL_MOVE}>" /></a>
-        <a href="editindex.php?op=indexDelete&amp;index_id=<{$index.index_id|xoops_escape}>" rel="<{$mytrustdirname}>Popin"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" title="<{$smarty.const._MD_XOONIPS_LABEL_DELETE}>" alt="<{$smarty.const._MD_XOONIPS_LABEL_DELETE}>" /></a>
+        <a href="indexdescription.php?index_id=<{$index.index_id|xoops_escape}>&back=<{$xid|xoops_escape}>"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/edit.png" title="<{$smarty.const._MD_XOONIPS_LABEL_MODIFY}>" alt="<{$smarty.const._MD_XOONIPS_LABEL_MODIFY}>"></a>
+        <a href="editindex.php?op=indexMove&amp;index_id=<{$index.index_id|xoops_escape}>" rel="<{$mytrustdirname}>Popin"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/folder_move.png" title="<{$smarty.const._MD_XOONIPS_LABEL_MOVE}>" alt="<{$smarty.const._MD_XOONIPS_LABEL_MOVE}>"></a>
+        <a href="editindex.php?op=indexDelete&amp;index_id=<{$index.index_id|xoops_escape}>" rel="<{$mytrustdirname}>Popin"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" title="<{$smarty.const._MD_XOONIPS_LABEL_DELETE}>" alt="<{$smarty.const._MD_XOONIPS_LABEL_DELETE}>"></a>
 		<{/if}>
       </td>
   </tr>
@@ -89,7 +89,7 @@ function xoonipsCallback(id, value) {
   <tr>
       <td align="center">
       <{if $indexNumberLimit==0 || $indexCount<$indexNumberLimit}>
-        <input id="<{$dirname}>_add_button" class="formButton" type="button" href="editindex.php?op=indexEdit&amp;parent_index_id=<{$xid|xoops_escape}>" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_INDEX_TITLE_ADD}>" />
+        <input id="<{$dirname}>_add_button" class="formButton" type="button" href="editindex.php?op=indexEdit&amp;parent_index_id=<{$xid|xoops_escape}>" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_INDEX_TITLE_ADD}>">
 	  <{/if}>
       </td>
   </tr>
@@ -101,5 +101,5 @@ function xoonipsCallback(id, value) {
     <td align="right"><a href="<{$itemListUrl}>?index_id=<{$xid|xoops_escape}>"><{$smarty.const._MD_XOONIPS_ITEM_LISTING_ITEM}></a> | <a href="<{$xoops_url}>/"><{$smarty.const._MD_XOONIPS_LABEL_HOME}></a></td>
   </tr>
 </table>
-<hr />
+<hr>
 <{include file="db:`$dirname`_footer.html"}>

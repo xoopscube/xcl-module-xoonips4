@@ -37,10 +37,10 @@
 <div style="float:right">
 <ul class="toptab">
 <{foreach item=tab from=$toptab}>
-  <li class="<{$tab.class}>"><a href="<{$tab.link|xoops_escape}>"><{$tab.title|xoops_escape}></a></li>
+  <li class="<{$tab.class}>"><a class="ui-btn" href="<{$tab.link|xoops_escape}>"><{$tab.title|xoops_escape}></a></li>
 <{/foreach}>
 </ul>
-</div><br style="clear:both" />
+</div><br style="clear:both">
 <{/if}>
 
 <{if $actionForm && $actionForm->hasError()}>

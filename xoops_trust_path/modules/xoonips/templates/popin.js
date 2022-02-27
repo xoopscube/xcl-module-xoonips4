@@ -64,7 +64,7 @@ $.fn.<{$mytrustdirname}>Popin = function(settings) {
 		};
 
 		var buildpopin = function() {
-                        $('body').append('<div class="<{$mytrustdirname}>Popin"><a href="#" class="b_close" rel="close">Close</a><div class="popinContent"><img src="' + settings.loader_path + '" alt="Loading" class="loader" /><div class="popinContent-container"></div></div></div>');
+                        $('body').append('<div class="<{$mytrustdirname}>Popin"><a href="#" class="b_close" rel="close">Close</a><div class="popinContent"><img src="' + settings.loader_path + '" alt="Loading" class="loader"><div class="popinContent-container"></div></div></div>');
 			$popin = $('div.<{$mytrustdirname}>Popin:last');
 			$popin.css('zIndex', 10001 + (popinIndex * 2));
 			$c = $popin.find('.popinContent-container'); // The content container

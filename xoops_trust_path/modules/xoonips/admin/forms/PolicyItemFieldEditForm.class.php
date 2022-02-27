@@ -47,7 +47,7 @@ class Xoonips_Admin_PolicyItemFieldEditForm extends Xoonips_AbstractActionForm
                 'label' => constant($constpref.'_LANG_ITEM_FIELD_NAME'),
                 'depends' => [
                     'required' => true,
-                    'maxlength' => 255,
+                    'maxlength' => 191,
                 ],
             ],
             'view_type_id' => [
@@ -75,7 +75,7 @@ class Xoonips_Admin_PolicyItemFieldEditForm extends Xoonips_AbstractActionForm
                 'label' => constant($constpref.'_LANG_ITEM_FIELD_DATA_LENGTH'),
                 'depends' => [
                     'required' => true,
-                    'max' => 255,
+                    'max' => 191,
                     'min' => -1,
                 ],
             ],

@@ -11,7 +11,7 @@ class Xoonips_ItemSortObject extends XoopsSimpleObject
     public function __construct()
     {
         $this->initVar('sort_id', XOBJ_DTYPE_INT, 0, true);
-        $this->initVar('title', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('title', XOBJ_DTYPE_STRING, '', true, 191);
     }
 }
 

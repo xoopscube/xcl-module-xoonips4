@@ -1,5 +1,5 @@
 <{if $viewType eq 'input'}>
-	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" />
+	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>">
 	<table>
 	<{if !empty($changeLogInfos)}>
 		<{foreach item=changeLogInfo from=$changeLogInfos}>
@@ -14,7 +14,7 @@
 	<{/if}>
 	</table>
 <{elseif $viewType eq 'confirm'}>
-	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" />
+	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>">
 	<table>
 	<{if !empty($changeLogInfos)}>
 		<{foreach item=changeLogInfo from=$changeLogInfos}>
@@ -41,7 +41,7 @@
 		</table>
 	<{/if}>
 <{elseif $viewType eq 'search'}>
-	<input type="text" name="<{$fieldName|xoops_escape}>" size="50" value="" />
+	<input type="text" name="<{$fieldName|xoops_escape}>" size="50" value="">
 <{elseif $viewType eq "default"}>
-	<input type="hidden" name="default_value" value="" />
+	<input type="hidden" name="default_value" value="">
 <{/if}>

@@ -75,7 +75,7 @@ class Xoonips_Installer extends ModuleInstaller
             list($dirname, $show_func) = $block;
             $bid = XoopsSystemUtils::getBlockId($dirname, $show_func);
             if (null !== $bid) {
-                XoopsSystemUtils::setBlockInfo($bid, XoopsSystemUtils::BLOCK_SIDE_HIDE, false, false);
+                XoopsSystemUtils::setBlockInfo($bid, XoopsSystemUtils::BLOCK_SIDE_HIDE, false, (array)false);
             }
         }
     }
@@ -91,8 +91,8 @@ class Xoonips_Installer extends ModuleInstaller
             $sql = <<<'SQL'
 ALTER TABLE `{prefix}_groups`
     ADD `activate` tinyint(1) unsigned NOT NULL default '0' AFTER `groupid`,
-    ADD `icon` varchar(255) default NULL AFTER `description`,
-    ADD `mime_type` varchar(255) default NULL AFTER `icon`,
+    ADD `icon` varchar(191) default NULL AFTER `description`,
+    ADD `mime_type` varchar(191) default NULL AFTER `icon`,
     ADD `is_public` tinyint(1) unsigned NOT NULL default '0' AFTER `mime_type`,
     ADD `can_join` tinyint(1) unsigned NOT NULL default '0' AFTER `is_public`,
     ADD `is_hidden` tinyint(1) unsigned NOT NULL default '0' AFTER `can_join`,
@@ -249,7 +249,7 @@ SQL;
             ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['float'], 'data_length' => 24, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['double'], 'data_length' => 53, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['char'], 'data_length' => 10, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['date'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['hidden'], 'data_type_id' => $dataTypeIds['datetime'], 'data_length' => -1, 'data_decimal_places' => -1],
@@ -258,31 +258,31 @@ SQL;
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['float'], 'data_length' => 24, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['double'], 'data_length' => 53, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['char'], 'data_length' => 10, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['date'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['datetime'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['text'], 'data_type_id' => $dataTypeIds['blob'], 'data_length' => -1, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['textarea'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['textarea'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['textarea'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['radio'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 11, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['radio'], 'data_type_id' => $dataTypeIds['float'], 'data_length' => 24, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['radio'], 'data_type_id' => $dataTypeIds['double'], 'data_length' => 53, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['radio'], 'data_type_id' => $dataTypeIds['char'], 'data_length' => 10, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['radio'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['radio'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['checkbox'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 11, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['checkbox'], 'data_type_id' => $dataTypeIds['float'], 'data_length' => 24, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['checkbox'], 'data_type_id' => $dataTypeIds['double'], 'data_length' => 53, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['checkbox'], 'data_type_id' => $dataTypeIds['char'], 'data_length' => 10, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['checkbox'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['checkbox'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['select'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 11, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['select'], 'data_type_id' => $dataTypeIds['float'], 'data_length' => 24, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['select'], 'data_type_id' => $dataTypeIds['double'], 'data_length' => 53, 'data_decimal_places' => 1],
             ['view_type_id' => $viewTypeIds['select'], 'data_type_id' => $dataTypeIds['char'], 'data_length' => 10, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['select'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['select'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['id'], 'data_type_id' => $dataTypeIds['blob'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['title'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['keyword'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['keyword'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['last update'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 10, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['create date'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 10, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['create user'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 10, 'data_decimal_places' => -1],
@@ -290,17 +290,17 @@ SQL;
             ['view_type_id' => $viewTypeIds['index'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 10, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['relation item'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 10, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['date(yyyy mm dd)'], 'data_type_id' => $dataTypeIds['date'], 'data_length' => -1, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['preview'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['file upload'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['preview'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['file upload'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['file type'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 30, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['download limit'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['download notify'], 'data_type_id' => $dataTypeIds['int'], 'data_length' => 1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['readme'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['rights'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['url'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['url'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['pubmed id'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 30, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['isbn'], 'data_type_id' => $dataTypeIds['char'], 'data_length' => 13, 'data_decimal_places' => -1],
-            ['view_type_id' => $viewTypeIds['kana'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 255, 'data_decimal_places' => -1],
+            ['view_type_id' => $viewTypeIds['kana'], 'data_type_id' => $dataTypeIds['varchar'], 'data_length' => 191, 'data_decimal_places' => -1],
             ['view_type_id' => $viewTypeIds['kana'], 'data_type_id' => $dataTypeIds['text'], 'data_length' => -1, 'data_decimal_places' => -1],
         ];
         $this->_insertData('view_data_relation', $relationArr);

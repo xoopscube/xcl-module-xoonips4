@@ -9,7 +9,7 @@
 <table width="100%" cellspacing="1" class="outer">
   <thead>
   <tr>
-    <th style="width: 25%; text-align: center;" class="head"><br /></th>
+    <th style="width: 25%; text-align: center;" class="head"><br></th>
     <th style="width: 75%; text-align: center;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_MODIFY_CONTENT}></th>
   </tr>
   </thead>
@@ -18,7 +18,7 @@
     	<{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_GROUP_NAME}><{$smarty.const._AM_XOONIPS_LABEL_REQUIRED_MARK}>
     </td>
     <td style="width: 75%; text-align: left;" class="odd">&nbsp;&nbsp;
-    	<input type="text" name="name" size="50" maxlength="255" value="<{$name|xoops_escape}>" />
+    	<input type="text" name="name" size="50" maxlength="191" value="<{$name|xoops_escape}>">
     </td>
   </tr>
   <tr>
@@ -26,7 +26,7 @@
     	<{$smarty.const._AM_XOONIPS_POLICY_ITEMFIELDGROUP_ID}><{$smarty.const._AM_XOONIPS_LABEL_REQUIRED_MARK}>
     </td>
     <td style="width: 75%; text-align: left;" class="even">&nbsp;&nbsp;
-    	<input type="text" name="xml" size="50" maxlength="30" value="<{$xml|xoops_escape}>" />
+    	<input type="text" name="xml" size="50" maxlength="30" value="<{$xml|xoops_escape}>">
     </td>
   </tr>
   <tr>
@@ -35,9 +35,9 @@
    	</td>
     <td style="width: 75%; text-align: left;" class="odd">&nbsp;&nbsp;
     	<{if $occurrence=='1'}>
-    	<input type="checkbox" name="occurrence" value="1" checked />
+    	<input type="checkbox" name="occurrence" value="1" checked>
     	<{else}>
-    	<input type="checkbox" name="occurrence" value="1" />
+    	<input type="checkbox" name="occurrence" value="1">
     	<{/if}>
     </td>
   </tr>
@@ -59,7 +59,7 @@
     	<{if $itemfield.select=='1'}>
     	<input type="checkbox" name="checkbox_<{$itemfield.itemfieldid|xoops_escape}>" value="1" checked/>
     	<{else}>
-    	<input type="checkbox" name="checkbox_<{$itemfield.itemfieldid|xoops_escape}>" value="1" />
+    	<input type="checkbox" name="checkbox_<{$itemfield.itemfieldid|xoops_escape}>" value="1">
     	<{/if}>
     </td>
     <td style="text-align: left;"><{$itemfield.name|xoops_escape}>&nbsp;&nbsp;<{if $itemfield.editing ne ''}><span class="<{$dirname}>_diff"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_EDITING}></span><{/if}></td>
@@ -80,9 +80,9 @@
 
 <div style="text-align: left">
 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>"
-	onclick="window.location='policy_itemgroup.php'" />&nbsp;&nbsp;
+	onclick="window.location='policy_itemgroup.php'">&nbsp;&nbsp;
  	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_REGISTER}>" onclick="op.value='registersave'; mode.value=0; submit();">&nbsp;&nbsp;
-	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_RELEASE}>" onclick="op.value='registersave'; mode.value=1; submit();" />
+	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_RELEASE}>" onclick="op.value='registersave'; mode.value=1; submit();">
 </div>
 </form>
 <{include file="file:admin_footer.inc.html"}>

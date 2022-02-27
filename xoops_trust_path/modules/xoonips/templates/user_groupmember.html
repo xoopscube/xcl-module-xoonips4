@@ -26,8 +26,8 @@ function deleteUser(id) {
 </script>
 <form id="<{$dirname}>_groupMemberForm" name="<{$dirname}>_groupMemberForm" action="user.php?op=groupMember" method="post">
 <{$token_ticket}>
-<input type="hidden" id="<{$dirname}>_action" name="action" value="" />
-<input type="hidden" id="<{$dirname}>_groupid" name="groupid" value="<{$group.groupid|xoops_escape}>" />
+<input type="hidden" id="<{$dirname}>_action" name="action" value="">
+<input type="hidden" id="<{$dirname}>_groupid" name="groupid" value="<{$group.groupid|xoops_escape}>">
 <table class="outer" cellspacing="1" cellpadding="4">
  <tr>
   <td width="40%" class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_NAME}></td>
@@ -38,37 +38,37 @@ function deleteUser(id) {
   <td class="<{cycle name="oddeven"}>"><pre><{$group.description|xoops_escape}></pre></td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_ADMIN}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_ADMIN}><br></td>
   <td class="<{cycle name="oddeven"}>">
   	<{foreach item=admin from=$admins}>
-  		<input type="hidden" name="adminid[]" value="<{$admin.uid|xoops_escape}>" />
-    	<{$admin.name|xoops_escape}><{if $admin.name}>(<{/if}><{$admin.uname|xoops_escape}><{if $admin.name}>)<{/if}><br />
+  		<input type="hidden" name="adminid[]" value="<{$admin.uid|xoops_escape}>">
+    	<{$admin.name|xoops_escape}><{if $admin.name}>(<{/if}><{$admin.uname|xoops_escape}><{if $admin.name}>)<{/if}><br>
  	<{/foreach}>
   </td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_MEMBERS}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_MEMBERS}><br></td>
   <td class="<{cycle name="oddeven"}>">
   	<{foreach item=member from=$members}>
   	 	<div id="<{$dirname}>_memberid<{$member.uid|xoops_escape}>">
-  		<input type="hidden" name="memberid[]" value="<{$member.uid|xoops_escape}>" />
+  		<input type="hidden" name="memberid[]" value="<{$member.uid|xoops_escape}>">
     	<{$member.name|xoops_escape}><{if $member.name}>(<{/if}><{$member.uname|xoops_escape}><{if $member.name}>)<{/if}>
     	<{if $member.deleteFlag}>
     	<a href="javascript:deleteUser(<{$member.uid|xoops_escape}>);">
-       		<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>" />
+       		<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>">
        	</a>
        	<{else}><{if $member.activate==1}> (Join Pending)<{elseif $member.activate==2}> (Leave Pending)<{/if}>
        	<{/if}>
-       	<br />
+       	<br>
        	</div>
  	<{/foreach}>
-	<input type="button" href="<{$smarty.const.XOOPS_URL}>/modules/<{$dirname}>/index.php?action=Ajax&method=UserSelect&callbackid=1;1;1" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_LANG_SEARCH}>" />
+	<input type="button" href="<{$smarty.const.XOOPS_URL}>/modules/<{$dirname}>/index.php?action=Ajax&method=UserSelect&callbackid=1;1;1" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_LANG_SEARCH}>">
   </td>
  </tr>
 </table>
 <div style="text-align: center">
- <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_UPDATE}>" onclick="this.form.action.value='update';submit()" />
- <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_BACK}>" onclick="this.form.action.value='init';this.form.action='user.php?op=groupList';submit()" />
+ <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_UPDATE}>" onclick="this.form.action.value='update';submit()">
+ <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_BACK}>" onclick="this.form.action.value='init';this.form.action='user.php?op=groupList';submit()">
 </div>
 </form>
 <{include file="db:`$dirname`_user_footer.html"}>

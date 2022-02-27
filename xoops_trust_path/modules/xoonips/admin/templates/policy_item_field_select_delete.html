@@ -1,8 +1,8 @@
 <{include file="file:admin_header.inc.html"}>
 
 <form name="<{$xoops_dirname}>_policy_item_field_selectform" id="<{$xoops_dirname}>_policy_item_field_selectform" action="index.php" method="post">
-<input type="hidden" name="action" value="PolicyItemFieldSelectDelete" />
-<input type="hidden" name="name" value="<{$object.name|xoops_escape}>" />
+<input type="hidden" name="action" value="PolicyItemFieldSelectDelete">
+<input type="hidden" name="name" value="<{$object.name|xoops_escape}>">
 
 <{xoops_token form=$actionForm}>
 <table width="100%" cellspacing="1" class="outer">
@@ -22,9 +22,9 @@
 </table>
 
 <div style="text-align: center; margin-top: 10px;">
-  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel">
   &nbsp;
-  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_DELETE"|constant}>" name="submit" />
+  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_DELETE"|constant}>" name="submit">
 </div>
 </form>
 

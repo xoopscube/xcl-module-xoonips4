@@ -7,8 +7,8 @@
 <div style="text-align:right; margin-left: 10px; margin-bottom: 10px;">
 </div>
 <form style="margin-top: 0px;" action="itemimport.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="op" value="" />
-<input type="hidden" id="<{$dirname}>CheckedXID" name="checked_indexes" value="" />
+<input type="hidden" name="op" value="">
+<input type="hidden" id="<{$dirname}>CheckedXID" name="checked_indexes" value="">
 <{$token_ticket}>
 <table width="100%" cellspacing="0" class="outer">
   <tbody>
@@ -119,14 +119,14 @@ if(window.addEventListener) {
 <{/if}>
   <tr>
     <td style="width: 30%; text-align: left;" class="head"><{$smarty.const._MD_XOONIPS_ITEM_IMPORT_FILE}></td>
-    <td style="width: 70%; text-align: left;" class="even"><input type="file" name="import_file" size="30" /></td>
+    <td style="width: 70%; text-align: left;" class="even"><input type="file" name="import_file" size="30"></td>
   </tr>
   </tbody>
 </table>
 <div style="text-align:right; margin-left: 10px; margin-bottom: 10px;">
 </div>
 <div style="text-align: left">
- 	<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_LABEL_REGISTER}>" onclick="op.value='importsave'; submit();" />&nbsp;&nbsp;
+ 	<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_LABEL_REGISTER}>" onclick="op.value='importsave'; submit();">&nbsp;&nbsp;
 </div>
 </form>
 <{include file="db:`$dirname`_footer.html"}>

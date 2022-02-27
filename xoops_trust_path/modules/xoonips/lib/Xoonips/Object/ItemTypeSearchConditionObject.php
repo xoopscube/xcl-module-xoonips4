@@ -18,7 +18,7 @@ class ItemTypeSearchConditionObject extends AbstractObject
     {
         parent::__construct($dirname);
         $this->initVar('condition_id', XOBJ_DTYPE_INT, null, true);
-        $this->initVar('title', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('title', XOBJ_DTYPE_STRING, '', true, 191);
     }
 
     /**

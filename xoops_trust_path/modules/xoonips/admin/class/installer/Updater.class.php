@@ -79,7 +79,7 @@ class Xoonips_Updater extends ModuleUpdater
         $this->mLog->addReport('Start to apply changes since verion 4.20.');
         $dirname = $this->mCurrentXoopsModule->get('dirname');
         $ifdHandler = Functions::getXoonipsHandler('ItemFieldDetailObject', $dirname);
-        // item_extend : dataType varchar(255) => text
+        // item_extend : dataType varchar(191) => text
         $xmls = ['kana', 'romaji', 'sub_title_title', 'sub_title_kana', 'sub_title_romaji', 'name', 'jalc_doi', 'naid', 'ichushi', 'grant_id', 'date_of_granted', 'degree_name', 'grantor', 'type_of_resource', 'textversion'];
         $criteria = new Criteria('xml', $xmls, 'IN');
         $ifdObjs = $ifdHandler->getObjects($criteria);
@@ -87,11 +87,11 @@ class Xoonips_Updater extends ModuleUpdater
             $table = $ifdObj->get('table_name');
             if (SqlUtils::tableExists($table)) {
                 $cinfo = SqlUtils::getColumnInfo($table, 'value');
-                if (false !== $cinfo && 'varchar(255)' == $cinfo['Type']) {
+                if (false !== $cinfo && 'varchar(191)' == $cinfo['Type']) {
                     $sqls = <<<'SQL'
 ALTER TABLE `{prefix}_{table_name}` DROP INDEX `value`;
 ALTER TABLE `{prefix}_{table_name}` MODIFY `value` TEXT;
-ALTER TABLE `{prefix}_{table_name}` ADD INDEX `value`(`value`(255));
+ALTER TABLE `{prefix}_{table_name}` ADD INDEX `value`(`value`(191));
 SQL;
                     $sqls = str_replace('{table_name}', $table, $sqls);
                     if (SqlUtils::execute($sqls)) {
@@ -105,7 +105,7 @@ SQL;
                 }
             }
         }
-        // item_extend : dataType varchar(255) => varchar(1000)
+        // item_extend : dataType varchar(191) => varchar(1000)
         $xmls = ['physical_description', 'uri'];
         $criteria = new Criteria('xml', $xmls, 'IN');
         $ifdObjs = $ifdHandler->getObjects($criteria);
@@ -113,11 +113,11 @@ SQL;
             $table = $ifdObj->get('table_name');
             if (SqlUtils::tableExists($table)) {
                 $cinfo = SqlUtils::getColumnInfo($table, 'value');
-                if (false !== $cinfo && 'varchar(255)' == $cinfo['Type']) {
+                if (false !== $cinfo && 'varchar(191)' == $cinfo['Type']) {
                     $sqls = <<<'SQL'
 ALTER TABLE `{prefix}_{table_name}` DROP INDEX `value`;
 ALTER TABLE `{prefix}_{table_name}` MODIFY `value` VARCHAR(1000);
-ALTER TABLE `{prefix}_{table_name}` ADD INDEX `value`(`value`(255));
+ALTER TABLE `{prefix}_{table_name}` ADD INDEX `value`(`value`(191));
 SQL;
                     $sqls = str_replace('{table_name}', $table, $sqls);
                     if (SqlUtils::execute($sqls)) {
@@ -135,9 +135,9 @@ SQL;
         if (!SqlUtils::columnExists($table, 'detailed_title')) {
             $sqls = <<<'SQL'
 ALTER TABLE `{prefix}_{table_name}`
-  ADD `detailed_title` VARCHAR(255) DEFAULT NULL AFTER `description`, 
-  ADD `icon` VARCHAR(255) DEFAULT NULL AFTER `detailed_title`, 
-  ADD `mime_type` VARCHAR(255) DEFAULT NULL AFTER `icon`, 
+  ADD `detailed_title` VARCHAR(191) DEFAULT NULL AFTER `description`, 
+  ADD `icon` VARCHAR(191) DEFAULT NULL AFTER `detailed_title`, 
+  ADD `mime_type` VARCHAR(191) DEFAULT NULL AFTER `icon`, 
   ADD `detailed_description` TEXT DEFAULT NULL AFTER `mime_type`;
 UPDATE `{prefix}_{table_name}` SET `detailed_description`=`description`;
 ALTER TABLE `{prefix}_{table_name}` DROP COLUMN `description`;

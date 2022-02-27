@@ -25,20 +25,20 @@ $('input.<{$dirname}>_search_block_checkbox').each(function(){
 <{include file="db:`$dirname`_search_tab.inc.html"}>
 <h3><{$smarty.const._MD_XOONIPS_ITEM_ADVANCED_SEARCH_TITLE}></h3>
 <form id="<{$dirname}>_advancedsearchform" action="<{$itemselect_url}>" method="post">
-<input type="hidden" name="op" value="advanced" />
-<input type="hidden" name="search_parameter" value="" />
+<input type="hidden" name="op" value="advanced">
+<input type="hidden" name="search_parameter" value="">
 
 <div style="text-align: center;">
-<input class="formButton" type="submit" value="<{$smarty.const._MD_XOONIPS_ITEM_SEARCH_BUTTON_LABEL}>" />
+<input class="formButton" type="submit" value="<{$smarty.const._MD_XOONIPS_ITEM_SEARCH_BUTTON_LABEL}>">
 </div>
-<br />
+<br>
 
 <{foreach item=block key=block_key from=$blocks}>
 <div class="<{$dirname}>_padding">
 <table class="outer">
 <tr>
 	<th align="left">
-		<input type="checkbox" name="<{$block.itemtype_id|xoops_escape}>" class="<{$dirname}>_search_block_checkbox" id="<{$dirname}>_search_block_<{$block_key}>" value="on" />
+		<input type="checkbox" name="<{$block.itemtype_id|xoops_escape}>" class="<{$dirname}>_search_block_checkbox" id="<{$dirname}>_search_block_<{$block_key}>" value="on">
 		<{$block.itemtype_name|escape}>
 	</th>
 </tr>
@@ -54,7 +54,7 @@ $('input.<{$dirname}>_search_block_checkbox').each(function(){
 <{/foreach}>
 
 <div style="text-align: center;">
-  <input class="formButton" type="submit" value="<{$smarty.const._MD_XOONIPS_ITEM_SEARCH_BUTTON_LABEL}>" />
+  <input class="formButton" type="submit" value="<{$smarty.const._MD_XOONIPS_ITEM_SEARCH_BUTTON_LABEL}>">
 </div>
 </form>
 <{include file="db:`$dirname`_footer.html"}>

@@ -21,7 +21,7 @@ class Xoonips_ItemFieldObject extends XoopsSimpleObject
         $this->initVar('item_type_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('group_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('weight', XOBJ_DTYPE_INT, 1, true);
-        $this->initVar('name', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('name', XOBJ_DTYPE_STRING, '', true, 191);
         $this->initVar('xml', XOBJ_DTYPE_STRING, '', true, 30);
         $this->initVar('view_type_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('data_type_id', XOBJ_DTYPE_INT, 0, true);
@@ -306,7 +306,7 @@ class Xoonips_ItemFieldHandler extends XoopsObjectGenericHandler
         $names = ['varchar', 'text'];
         $handler = Functions::getXoonipsHandler('DataTypeObject', $this->mDirname);
         $criteria = new Criteria('name', $names, 'IN');
-        $objs = &$handler->getObjects($criteria, null, null, true);
+        $objs = $handler->getObjects($criteria, null, null, true);
 
         return array_keys($objs);
     }

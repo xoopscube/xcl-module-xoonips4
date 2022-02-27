@@ -43,7 +43,7 @@
       <{else}>
          (<{$userObjects[$uid]->getShow('posts')}>) &raquo; <b  class="user_module_error"><{$actionForm->get('posts',$uid)|xoops_escape}></b>
       <{/if}>
-      <input type="hidden" name="posts[<{$uid|xoops_escape}>]" value="<{$actionForm->get('posts',$uid)|xoops_escape:edit}>" />
+      <input type="hidden" name="posts[<{$uid|xoops_escape}>]" value="<{$actionForm->get('posts',$uid)|xoops_escape:edit}>">
     </td>
     <td class="user_list_order">
       <{if $userObjects[$uid]->get('level') == 0}>
@@ -65,9 +65,9 @@
         <{/if}>
 	</b>
       <{if $actionForm->get('delete',$uid)}>
-        <input type="hidden" name="delete[<{$uid|xoops_escape}>]" value="1" />
+        <input type="hidden" name="delete[<{$uid|xoops_escape}>]" value="1">
       <{else}>
-        <input type="hidden" name="delete[<{$uid|xoops_escape}>]" value="0" />
+        <input type="hidden" name="delete[<{$uid|xoops_escape}>]" value="0">
       <{/if}>
     </td>
   </tr>
@@ -75,8 +75,8 @@
 <{/foreach}>
   <tr>
     <td class="foot" colspan="6">
-      <input type="submit" value="<{$smarty.const._SUBMIT}>" class="formButton" />
-      <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+      <input type="submit" value="<{$smarty.const._SUBMIT}>" class="formButton">
+      <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
     </td>
   </tr>
 </table>

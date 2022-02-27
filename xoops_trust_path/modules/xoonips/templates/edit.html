@@ -43,7 +43,7 @@ $('#<{$dirname}>_editform :input[type=file]').change(function(){
 <h4><{$smarty.const._MD_XOONIPS_ITEM_MODIFY_ITEM_TITLE}></h4>
 
 <table><tr><td width="30%">
-<b><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_INDEX_TREE}></b><br />
+<b><{$smarty.const._MD_XOONIPS_ITEM_SELECT_SUB_INDEX_TREE}></b><br>
 <script type="text/javascript" charset="utf-8">
 jQuery(function(){
 	jQuery('#<{$dirname}>_item_edit_index_tree_tabs').tabs({ 
@@ -191,10 +191,10 @@ jQuery(function(){
 <td width="70%">
 <{$errors}>
 <form id="<{$dirname}>_editform" target="<{$dirname}>_uploadoutputiframe" name="<{$dirname}>_editform" action="<{$next_url}>" method="post" enctype="multipart/form-data">
-<input type="hidden" name="itemtype_id" value="<{$itemtype_id|xoops_escape}>" />
-<input type="hidden" name="item_id" value="<{$item_id|xoops_escape}>" />
-<input id="<{$dirname}>_targetItemId" type="hidden" name="targetItemId" value="" />
-<input id="<{$dirname}>_fileuploadclick" type="hidden" name="fileuploadclick" value="0" />
+<input type="hidden" name="itemtype_id" value="<{$itemtype_id|xoops_escape}>">
+<input type="hidden" name="item_id" value="<{$item_id|xoops_escape}>">
+<input id="<{$dirname}>_targetItemId" type="hidden" name="targetItemId" value="">
+<input id="<{$dirname}>_fileuploadclick" type="hidden" name="fileuploadclick" value="0">
 <{if !empty($editryView)}>
 	<div style="text-align: center; margin: 10px;">
 	<span id="<{$dirname}>_message_label_top">
@@ -207,16 +207,16 @@ jQuery(function(){
 <{/if}>
 <{if isset($num_of_items_current) && isset($num_of_items_max)}>
 	<{if $num_of_items_max == 0}>
-		<{$smarty.const._MD_XOONIPS_ITEM_NUM_OF_ITEM}>:<{$num_of_items_current}> / <{$smarty.const._MD_XOONIPS_LABEL_UNLIMIT}><br />
+		<{$smarty.const._MD_XOONIPS_ITEM_NUM_OF_ITEM}>:<{$num_of_items_current}> / <{$smarty.const._MD_XOONIPS_LABEL_UNLIMIT}><br>
 	<{else}>
-		<{$smarty.const._MD_XOONIPS_ITEM_NUM_OF_ITEM}>:<{$num_of_items_current}> / <{$num_of_items_max}><br />
+		<{$smarty.const._MD_XOONIPS_ITEM_NUM_OF_ITEM}>:<{$num_of_items_current}> / <{$num_of_items_max}><br>
 	<{/if}>
 <{/if}>
 <{if isset($storage_of_items_current) && isset($storage_of_items_max)}>
 	<{if $storage_of_items_max == 0}>
-		<{$smarty.const._MD_XOONIPS_ITEM_STORAGE_OF_ITEM}>:<{$storage_of_items_current}>MB / <{$smarty.const._MD_XOONIPS_LABEL_UNLIMIT}><br />
+		<{$smarty.const._MD_XOONIPS_ITEM_STORAGE_OF_ITEM}>:<{$storage_of_items_current}>MB / <{$smarty.const._MD_XOONIPS_LABEL_UNLIMIT}><br>
 	<{else}>
-		<{$smarty.const._MD_XOONIPS_ITEM_STORAGE_OF_ITEM}>:<{$storage_of_items_current}>MB / <{$storage_of_items_max}>MB<br />
+		<{$smarty.const._MD_XOONIPS_ITEM_STORAGE_OF_ITEM}>:<{$storage_of_items_current}>MB / <{$storage_of_items_max}>MB<br>
 	<{/if}>	
 <{/if}>
 <{if !empty($editryView)}>
@@ -232,8 +232,8 @@ jQuery(function(){
 <{/if}>
 <{if !empty($editryView)}>
 	<div style="text-align: center">
-	<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_NEXT_BUTTON_LABEL}>" onclick="<{$dirname}>Edit.edit()" />
-	<input type="button" rel="close" value="<{$smarty.const._MD_XOONIPS_LABEL_CANCEL}>" />
+	<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_NEXT_BUTTON_LABEL}>" onclick="<{$dirname}>Edit.edit()">
+	<input type="button" rel="close" value="<{$smarty.const._MD_XOONIPS_LABEL_CANCEL}>">
 	</div>
 	<iframe id="<{$dirname}>_uploadoutputiframe" name="<{$dirname}>_uploadoutputiframe" style="display:none;"></iframe>
 <{/if}>

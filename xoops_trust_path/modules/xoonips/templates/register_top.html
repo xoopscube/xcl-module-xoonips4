@@ -33,11 +33,11 @@ function xoonipsCallback(id, value) {
 <h4><{$smarty.const._MD_XOONIPS_ITEM_REGISTER_ITEM_TITLE}></h4>
 
 <form id="<{$dirname}>_registertopform" name="<{$dirname}>_registertopform" action="<{$next_url}>" method="post">
-<input id="<{$dirname}>_url" type="hidden" name="url" value="" />
-<input id="<{$dirname}>_redirect_msg" type="hidden" name="redirect_msg" value="" />
+<input id="<{$dirname}>_url" type="hidden" name="url" value="">
+<input id="<{$dirname}>_redirect_msg" type="hidden" name="redirect_msg" value="">
 
 <div style="text-align: center">
-	<input id="<{$dirname}>_selectitemtypebutton" type="button" href="register.php?op=selectItemtype" rel="SelectItemTypePopin" value="<{$smarty.const._MD_XOONIPS_ITEM_REGISTER_BUTTON_LABEL}>" />
+	<input id="<{$dirname}>_selectitemtypebutton" type="button" href="register.php?op=selectItemtype" rel="SelectItemTypePopin" value="<{$smarty.const._MD_XOONIPS_ITEM_REGISTER_BUTTON_LABEL}>">
 </div>
 </form>
 <{include file="db:`$dirname`_footer.html"}>

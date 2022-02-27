@@ -1,7 +1,7 @@
 <{include file="file:admin_header.inc.html"}>
 
 <form name="<{$xoops_dirname}>_policy_item_sort_editform" id="<{$xoops_dirname}>_policy_itemsort_editform" action="index.php" method="post">
-<input type="hidden" name="action" value="PolicyItemSortEdit" />
+<input type="hidden" name="action" value="PolicyItemSortEdit">
 
 <{xoops_token form=$actionForm}>
 <{xoops_input type=hidden name=sort_id value=$actionForm->get('sort_id')|xoops_escape}>
@@ -12,7 +12,7 @@
       <{"`$constpref`_POLICY_ITEM_SORT_LABEL"|constant}>
     </th>
     <td style="width: 80%;" class="even">
-      <{xoops_input type=text name=title size=30 maxlength=255 value=$actionForm->get('title')}>
+      <{xoops_input type=text name=title size=30 maxlength=191 value=$actionForm->get('title')}>
     </td>
   </tr>
 </table>
@@ -47,9 +47,9 @@
 </table>
 
 <div style="text-align: center; margin-top: 10px;">
-  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel">
   &nbsp;
-  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit" />
+  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit">
 </div>
 
 </form>

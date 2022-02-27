@@ -36,14 +36,14 @@ function hiddenClick(value) {
 <{$errors}>
 <form id="<{$dirname}>_groupRegisterForm" name="<{$dirname}>_groupRegisterForm" action="user.php?op=groupRegister" method="post" enctype="multipart/form-data">
 <{$token_ticket}>
-<input type="hidden" id="<{$dirname}>_op" name="action" value="register" />
-<input type="hidden" name="moderator" value="<{$moderator|xoops_escape}>" />
-<input type="hidden" name="is_public" value="<{$group.is_public|xoops_escape}>" />
-<table class="outer" cellspacing="1" cellpadding="4">
+<input type="hidden" id="<{$dirname}>_op" name="action" value="register">
+<input type="hidden" name="moderator" value="<{$moderator|xoops_escape}>">
+<input type="hidden" name="is_public" value="<{$group.is_public|xoops_escape}>">
+<table class="outer">
  <tr>
   <td width="40%" class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_NAME}><span style="color: red;">*</span></td>
   <td width="60%" class="<{cycle name="oddeven" values="odd,even"}>">
- 	<input type="text" name="name" size="50" value="<{$group.name|xoops_escape}>" />
+ 	<input type="text" name="name" size="50" value="<{$group.name|xoops_escape}>">
   </td>
  </tr>
  <tr>
@@ -57,100 +57,102 @@ function hiddenClick(value) {
   <td class="<{cycle name="oddeven"}>">
   	<{foreach item=u from=$user}>
   		 <div id="<{$dirname}>_uid<{$u.uid|xoops_escape}>">
-  		 	<input type="hidden" name="uid[]" value="<{$u.uid|xoops_escape}>" />
+  		 	<input type="hidden" name="uid[]" value="<{$u.uid|xoops_escape}>">
   		 	<{$u.name|xoops_escape}><{if $u.name}>(<{/if}><{$u.uname|xoops_escape}><{if $u.name}>)<{/if}> 
   		 	<{if $moderator}>  
   		 		<a href="javascript:deleteUser(<{$u.uid|xoops_escape}>);">
-       				<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>" />
+       				<img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>">
        			</a>
-       		<{/if}><br />
+       		<{/if}><br>
   		 </div>
   	<{/foreach}>
   	<{if $moderator}>  
-  		<input type="button" href="<{$xoops_url}>/modules/<{$dirname}>/index.php?action=Ajax&method=UserSelect&callbackid=1;1;1" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_LANG_SEARCH}>" />
+  		<input type="button" href="<{$xoops_url}>/modules/<{$dirname}>/index.php?action=Ajax&method=UserSelect&callbackid=1;1;1" rel="<{$mytrustdirname}>Popin" value="<{$smarty.const._MD_XOONIPS_LANG_SEARCH}>">
     <{/if}>    
   </td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_ICON}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_ICON}><br></td>
   <td class="<{cycle name="oddeven"}>">
-   <input type="file" name="filepath" size="40" />
+   <input type="file" name="filepath" size="40">
   </td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_JOIN_REQUEST}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_JOIN_REQUEST}><br></td>
   <td class="<{cycle name="oddeven"}>">
   	<{if $group.can_join eq 1}>
-  		<input type="radio" name="can_join" value="1" checked="checked" /><{$smarty.const._MD_XOONIPS_LANG_PERMIT}>
-  		<input type="radio" name="can_join" value="0" /><{$smarty.const._MD_XOONIPS_LANG_NO_PERMIT}>  				
+  		<input type="radio" name="can_join" value="1" checked="checked"><{$smarty.const._MD_XOONIPS_LANG_PERMIT}>
+  		<input type="radio" name="can_join" value="0"><{$smarty.const._MD_XOONIPS_LANG_NO_PERMIT}>
   	<{else}>
-  		<input type="radio" name="can_join" value="1" /><{$smarty.const._MD_XOONIPS_LANG_PERMIT}>
-  		<input type="radio" name="can_join" value="0" checked="checked" /><{$smarty.const._MD_XOONIPS_LANG_NO_PERMIT}>
+  		<input type="radio" name="can_join" value="1"><{$smarty.const._MD_XOONIPS_LANG_PERMIT}>
+  		<input type="radio" name="can_join" value="0" checked="checked"><{$smarty.const._MD_XOONIPS_LANG_NO_PERMIT}>
   	<{/if}>
   </td>
  </tr>
  <{if $moderator}>  
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_HIDDEN}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_HIDDEN}><br></td>
   <td class="<{cycle name="oddeven"}>">
   	<{if $group.is_hidden eq 1}>
-  		<input type="radio" name="is_hidden" value="0" onclick="hiddenClick('0')" /><{$smarty.const._MD_XOONIPS_LANG_NO}> 	
-  		<input type="radio" name="is_hidden" value="1" checked="checked" onclick="hiddenClick('1')" /><{$smarty.const._MD_XOONIPS_LANG_YES}> 			 		
+  		<input type="radio" name="is_hidden" value="0" onclick="hiddenClick('0')"><{$smarty.const._MD_XOONIPS_LANG_NO}>
+  		<input type="radio" name="is_hidden" value="1" checked="checked" onclick="hiddenClick('1')"><{$smarty.const._MD_XOONIPS_LANG_YES}>
   	<{else}>
-  		<input type="radio" name="is_hidden" value="0" checked="checked" onclick="hiddenClick('0')" /><{$smarty.const._MD_XOONIPS_LANG_NO}>
-  		<input type="radio" name="is_hidden" value="1" onclick="hiddenClick('1')" /><{$smarty.const._MD_XOONIPS_LANG_YES}> 		
+  		<input type="radio" name="is_hidden" value="0" checked="checked" onclick="hiddenClick('0')"><{$smarty.const._MD_XOONIPS_LANG_NO}>
+  		<input type="radio" name="is_hidden" value="1" onclick="hiddenClick('1')"><{$smarty.const._MD_XOONIPS_LANG_YES}>
   	<{/if}>
   </td>
  </tr>
  <{/if}>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_MEMBER_ACCEPT}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_MEMBER_ACCEPT}><br></td>
   <td class="<{cycle name="oddeven"}>">
    	<{if $group.member_accept eq 1}>
-   		<input type="radio" name="member_accept" value="1" checked="checked" /><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
-  		<input type="radio" name="member_accept" value="0" /><{$smarty.const._MD_XOONIPS_LANG_MANUAL}> 		 		 		
+   		<input type="radio" name="member_accept" value="1" checked="checked"><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
+  		<input type="radio" name="member_accept" value="0"><{$smarty.const._MD_XOONIPS_LANG_MANUAL}>
   	<{else}>
-   		<input type="radio" name="member_accept" value="1" /><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
-  		<input type="radio" name="member_accept" value="0" checked="checked" /><{$smarty.const._MD_XOONIPS_LANG_MANUAL}> 		 		
+   		<input type="radio" name="member_accept" value="1"><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
+  		<input type="radio" name="member_accept" value="0" checked="checked"><{$smarty.const._MD_XOONIPS_LANG_MANUAL}>
   	<{/if}>
   </td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_ITEM_ACCEPT}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_GROUP_ITEM_ACCEPT}><br></td>
   <td class="<{cycle name="oddeven"}>">
   	<{if $group.item_accept eq 1}>
-  		<input type="radio" name="item_accept" value="1" checked="checked" /><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
-  		<input type="radio" name="item_accept" value="0" /><{$smarty.const._MD_XOONIPS_LANG_MANUAL}> 		 		
+  		<input type="radio" name="item_accept" value="1" checked="checked"><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
+  		<input type="radio" name="item_accept" value="0"><{$smarty.const._MD_XOONIPS_LANG_MANUAL}>
 	<{else}>
-  		<input type="radio" name="item_accept" value="1" /><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
-  		<input type="radio" name="item_accept" value="0" checked="checked" /><{$smarty.const._MD_XOONIPS_LANG_MANUAL}> 	
+  		<input type="radio" name="item_accept" value="1"><{$smarty.const._MD_XOONIPS_LANG_AUTO}>
+  		<input type="radio" name="item_accept" value="0" checked="checked"><{$smarty.const._MD_XOONIPS_LANG_MANUAL}>
   	<{/if}>
   </td>
  </tr>
  <{if $moderator}>  
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_ITEM_LIMIT}><br /><span style="font-weight: normal;"><{$smarty.const._MD_XOONIPS_LANG_LIMIT_DESC}></span></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_ITEM_LIMIT}><br><span style="font-weight: normal;"><{$smarty.const._MD_XOONIPS_LANG_LIMIT_DESC}></span></td>
   <td class="<{cycle name="oddeven"}>">
-  <input type="text" name="item_number_limit" size="50" value="<{$group.item_number_limit|xoops_escape}>" /></td>
+  <input type="text" name="item_number_limit" size="50" value="<{$group.item_number_limit|xoops_escape}>"></td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_INDEX_LIMIT}><br /><span style="font-weight: normal;"><{$smarty.const._MD_XOONIPS_LANG_LIMIT_DESC}></span></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_INDEX_LIMIT}><br><span style="font-weight: normal;"><{$smarty.const._MD_XOONIPS_LANG_LIMIT_DESC}></span></td>
   <td class="<{cycle name="oddeven"}>">
-   <input type="text" name="index_number_limit" size="50" value="<{$group.index_number_limit|xoops_escape}>" /></td>
+   <input type="text" name="index_number_limit" size="50" value="<{$group.index_number_limit|xoops_escape}>"></td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_ITEM_STORAGE_LIMIT}><br /><span style="font-weight: normal;"><{$smarty.const._MD_XOONIPS_LANG_LIMIT_DESC}></span></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_LANG_ITEM_STORAGE_LIMIT}><br><span style="font-weight: normal;"><{$smarty.const._MD_XOONIPS_LANG_LIMIT_DESC}></span></td>
   <td class="<{cycle name="oddeven"}>">
-     <input type="text" name="item_storage_limit" size="50" value="<{$group.item_storage_limit|xoops_escape}>" /></td>
+     <input type="text" name="item_storage_limit" size="50" value="<{$group.item_storage_limit|xoops_escape}>"></td>
  </tr>
  <{else}>
- 	<input type="hidden" name="item_number_limit" value="<{$group.item_number_limit|xoops_escape}>" />
- 	<input type="hidden" name="index_number_limit" value="<{$group.index_number_limit|xoops_escape}>" />
- 	<input type="hidden" name="item_storage_limit" value="<{$group.item_storage_limit|xoops_escape}>" />
+ 	<input type="hidden" name="item_number_limit" value="<{$group.item_number_limit|xoops_escape}>">
+ 	<input type="hidden" name="index_number_limit" value="<{$group.index_number_limit|xoops_escape}>">
+ 	<input type="hidden" name="item_storage_limit" value="<{$group.item_storage_limit|xoops_escape}>">
  <{/if}>
+    <tfoot>
+    <tr>
+        <td colspan="2"><input class="ui-button" type="submit" value="<{$smarty.const._MD_XOONIPS_LANG_REGISTER}>"></td>
+    </tr>
+    </tfoot>
 </table>
-<div style="text-align: center">
- <input type="submit" value="<{$smarty.const._MD_XOONIPS_LANG_REGISTER}>" />
-</div>
 </form>
 <{include file="db:xoonips_user_footer.html"}>

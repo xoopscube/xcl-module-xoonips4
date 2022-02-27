@@ -1036,9 +1036,9 @@ class Xoonips_PolicyItemGroupAction extends Xoonips_ActionBase
             if ($insert_chk) {
                 $info = ['group_id' => $groupid,
                     'item_field_detail_id' => $id,
-                    'weight' => 255,
+                    'weight' => 191,
                     'edit' => 1,
-                    'edit_weight' => 255,
+                    'edit_weight' => 191,
                     'released' => 0, ];
                 $groupBean->insertLink($info, $insertId);
             } else {

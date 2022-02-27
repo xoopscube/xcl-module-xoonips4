@@ -18,6 +18,6 @@ class ComplementDetailObject extends AbstractObject
         $this->initVar('complement_detail_id', XOBJ_DTYPE_INT, null, true);
         $this->initVar('complement_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('code', XOBJ_DTYPE_STRING, '', true, 30);
-        $this->initVar('title', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('title', XOBJ_DTYPE_STRING, '', true, 191);
     }
 }

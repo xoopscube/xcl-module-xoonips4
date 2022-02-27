@@ -42,19 +42,19 @@ function listChange() {
 <table width="100%" cellspacing="1" class="outer">
   <thead>
   <tr>
-    <th style="width: 20%; text-align: center;" class="head"><br /></th>
+    <th style="width: 20%; text-align: center;" class="head"><br></th>
     <th style="width: 40%; text-align: center;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_MODIFY_CONTENT}></th>
     <th style="width: 40%; text-align: center;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_RELEASE_CONTENT}></th>
   </tr>
   </thead>
   <tr>
     <td style="width: 20%; text-align: left;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_NAME}><{$smarty.const._AM_XOONIPS_LABEL_REQUIRED_MARK}></td>
-    <td style="width: 40%; text-align: left;" class="odd">&nbsp;&nbsp;<input type="text" name="name" size="50" maxlength="255" value="<{$name|xoops_escape}>" /></td>
+    <td style="width: 40%; text-align: left;" class="odd">&nbsp;&nbsp;<input type="text" name="name" size="50" maxlength="191" value="<{$name|xoops_escape}>"></td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;&nbsp;<{if $name!=$detailInfo.b_name}><span class="<{$dirname}>_diff"><{$detailInfo.b_name|xoops_escape}></span><{else}><{$detailInfo.b_name|xoops_escape}><{/if}></td>
   </tr>
   <tr>
     <td style="width: 20%; text-align: left;" class="head"><{$smarty.const._AM_XOONIPS_POLICY_ITEMFIELD_ID}><{$smarty.const._AM_XOONIPS_LABEL_REQUIRED_MARK}></td>
-    <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;<input type="text" name="xml" size="50" maxlength="30" value="<{$xml|xoops_escape}>" /></td>
+    <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;<input type="text" name="xml" size="50" maxlength="30" value="<{$xml|xoops_escape}>"></td>
     <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;<{if $xml!=$detailInfo.b_xml}><span class="<{$dirname}>_diff"><{$detailInfo.b_xml|xoops_escape}></span><{else}><{$detailInfo.b_xml|xoops_escape}><{/if}></td>
   </tr>
   <tr>
@@ -94,7 +94,7 @@ function listChange() {
   <tr>
     <td style="width: 20%; text-align: left;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DATA_LENGTH}></td>
     <td style="width: 40%; text-align: left;" class="even">&nbsp;
-       	<input type="text" id="datalength" name="data_length" size="6" maxlength="5" value="<{if $data_length!=0}><{if $data_length!=-1}><{$data_length|xoops_escape}><{/if}><{else}><{if $default_data_length!=-1}><{$default_data_length|xoops_escape}><{/if}><{/if}>" <{$disabled_arr|xoops_escape}> />
+       	<input type="text" id="datalength" name="data_length" size="6" maxlength="5" value="<{if $data_length!=0}><{if $data_length!=-1}><{$data_length|xoops_escape}><{/if}><{else}><{if $default_data_length!=-1}><{$default_data_length|xoops_escape}><{/if}><{/if}>" <{$disabled_arr|xoops_escape}>>
        	<{if !empty($disabled_arr)}>
        	<input type="hidden" name="data_length" value="<{$data_length|xoops_escape}>">
        	<{/if}>
@@ -105,7 +105,7 @@ function listChange() {
   <tr>
     <td style="width: 20%; text-align: left;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DATA_LENGTH2}></td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;
-      	<input type="text" id="datalength2" name="data_decimal_places" size="3" maxlength="2" value="<{if $data_decimal_places ne ''}><{$data_decimal_places|xoops_escape}><{else}><{$default_decimal_places|xoops_escape}><{/if}>" <{$disabled_arr|xoops_escape}> />
+      	<input type="text" id="datalength2" name="data_decimal_places" size="3" maxlength="2" value="<{if $data_decimal_places ne ''}><{$data_decimal_places|xoops_escape}><{else}><{$default_decimal_places|xoops_escape}><{/if}>" <{$disabled_arr|xoops_escape}>>
       	<{if !empty($disabled_arr)}>
       	<input type="hidden" name="data_decimal_places" value="<{$data_decimal_places|xoops_escape}>">
       	<{/if}>
@@ -122,9 +122,9 @@ function listChange() {
     <td style="width: 20%; text-align: left;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_ESSENTIAL}></td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;
         <{if $essential=='1'}>
-        <input type="checkbox" name="essential" value="1" checked />
+        <input type="checkbox" name="essential" value="1" checked>
     	<{else}>
-    	<input type="checkbox" name="essential" value="1" />
+    	<input type="checkbox" name="essential" value="1">
     	<{/if}>
     </td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;
@@ -140,11 +140,11 @@ function listChange() {
     <td style="width: 20%; text-align: left;" class="head" rowspan="3"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DISPLAY}></td>
     <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;<{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_DISPLAY}>&nbsp;&nbsp;&nbsp;&nbsp;
        	<{if $detail_display=='1'}>
-    	<input type="checkbox" name="detail_display" value="1" checked />
+    	<input type="checkbox" name="detail_display" value="1" checked>
     	<{else}>
-    	<input type="checkbox" name="detail_display" value="1" />
+    	<input type="checkbox" name="detail_display" value="1">
     	<{/if}>
-    	<br /><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_DISPLAY_DESC}></span>
+    	<br><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_DISPLAY_DESC}></span>
     </td>
     <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;
         <{if $detailInfo.b_detail_display=='1'}>
@@ -158,11 +158,11 @@ function listChange() {
   <tr>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;&nbsp;<{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_TARGET}>&nbsp;&nbsp;&nbsp;&nbsp;
         <{if $detail_target=='1'}>
-    	<input type="checkbox" name="detail_target" value="1" checked />
+    	<input type="checkbox" name="detail_target" value="1" checked>
     	<{else}>
-    	<input type="checkbox" name="detail_target" value="1" />
+    	<input type="checkbox" name="detail_target" value="1">
     	<{/if}>
-    	<br /><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_TARGET_DESC}></span>
+    	<br><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DETAIL_TARGET_DESC}></span>
     </td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;&nbsp;
         <{if $detailInfo.b_detail_target=='1'}>
@@ -176,12 +176,12 @@ function listChange() {
   <tr>
     <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;<{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_SCOPE_SEARCH}>&nbsp;&nbsp;&nbsp;&nbsp;
         <{if $scope_search=='1'}>
-    	<input type="checkbox" name="scope_search" value="1" checked <{$scope_search_arr|xoops_escape}> />
+    	<input type="checkbox" name="scope_search" value="1" checked <{$scope_search_arr|xoops_escape}>>
     	<{else}>
-    	<input type="checkbox" name="scope_search" value="1" <{$scope_search_arr|xoops_escape}> />
+    	<input type="checkbox" name="scope_search" value="1" <{$scope_search_arr|xoops_escape}>>
     	<{/if}>
     	<input type="hidden" name="scope_search_arr" value="<{$scope_search_arr|xoops_escape}>">
-    	<br /><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_SCOPE_SEARCH_DESC}></span>
+    	<br><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_SCOPE_SEARCH_DESC}></span>
     </td>
     <td style="width: 40%; text-align: left;" class="even">&nbsp;&nbsp;
         <{if $detailInfo.b_scope_search=='1'}>
@@ -197,11 +197,11 @@ function listChange() {
     <td style="width: 20%; text-align: left;" class="head"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_NONDISPLAY}></td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;
         <{if $nondisplay=='1'}>
-    	<input type="checkbox" name="nondisplay" value="1" checked />
+    	<input type="checkbox" name="nondisplay" value="1" checked>
     	<{else}>
-    	<input type="checkbox" name="nondisplay" value="1" />
+    	<input type="checkbox" name="nondisplay" value="1">
     	<{/if}>
-    	<br /><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_NONDISPLAY_DESC}></span>
+    	<br><span style="font-weight: normal;"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_NONDISPLAY_DESC}></span>
     </td>
     <td style="width: 40%; text-align: left;" class="odd">&nbsp;&nbsp;
         <{if $detailInfo.b_nondisplay=='1'}>
@@ -216,9 +216,9 @@ function listChange() {
 </table>
 <div style="text-align: left">
 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>"
-	onclick="window.location='index.php?action=PolicyItemField'" />&nbsp;&nbsp;
+	onclick="window.location='index.php?action=PolicyItemField'">&nbsp;&nbsp;
 	<{if !$disedi}>
- 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_UPDATE}>" onclick="op.value='editsave'; mode.value=0; submit();" />&nbsp;&nbsp;
+ 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_UPDATE}>" onclick="op.value='editsave'; mode.value=0; submit();">&nbsp;&nbsp;
 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_RELEASE}>" onclick="op.value='editsave'; mode.value=1; submit();"/>
     <{/if}>
 </div>

@@ -2512,9 +2512,9 @@ class Xoonips_PolicyItemTypeAction extends Xoonips_ActionBase
             if ($insert_chk) {
                 $info = ['item_type_id' => $typeid,
                     'group_id' => $id,
-                    'weight' => 255,
+                    'weight' => 191,
                     'edit' => 1,
-                    'edit_weight' => 255,
+                    'edit_weight' => 191,
                     'released' => 0, ];
                 $typeBean->insertLink($info, $insertId);
             } else {

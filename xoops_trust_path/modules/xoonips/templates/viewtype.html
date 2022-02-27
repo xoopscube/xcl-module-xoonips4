@@ -5,12 +5,12 @@
 		<{$from|xoops_escape}>
 	<{/if}>
 <{elseif $viewType eq 'list'}>
-	<input type="hidden" name="list" value="<{$value|xoops_escape}>" />
+	<input type="hidden" name="list" value="<{$value|xoops_escape}>">
 <{elseif $viewType eq 'default'}>
-	<input type="text" name="default_value" size="30" maxlength="30" value="<{$value|xoops_escape}>" <{$disabled|xoops_escape}> />
+	<input type="text" name="default_value" size="30" maxlength="30" value="<{$value|xoops_escape}>" <{$disabled|xoops_escape}>>
 	<{if !empty($disabled)}>
-		<input type="hidden" name="default_value" value="<{$value|xoops_escape}>" />
+		<input type="hidden" name="default_value" value="<{$value|xoops_escape}>">
 	<{/if}>
 <{elseif $viewType eq 'simpleSearch'}>
-	<input type="checkbox" name="<{$fieldName|xoops_escape}>" value="1" rel="onClick" <{if $value=='1'}>checked="checked"<{/if}> />
+	<input type="checkbox" name="<{$fieldName|xoops_escape}>" value="1" rel="onClick" <{if $value=='1'}>checked="checked"<{/if}>>
 <{/if}>

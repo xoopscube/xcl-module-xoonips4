@@ -36,7 +36,7 @@ class Xoonips_DataTypeBlob extends Xoonips_DataType
         $value = [];
         $essential = (1 == $field->getEssential()) ? 'NOT NULL' : '';
         $value[0] = ' blob '.$essential;
-        $value[1] = '(255)';
+        $value[1] = '(191)';
 
         return $value;
     }

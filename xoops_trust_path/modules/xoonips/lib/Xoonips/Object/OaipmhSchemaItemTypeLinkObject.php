@@ -17,8 +17,8 @@ class OaipmhSchemaItemTypeLinkObject extends AbstractObject
         parent::__construct($dirname);
         $this->initVar('schema_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('item_type_id', XOBJ_DTYPE_INT, 0, true);
-        $this->initVar('group_id', XOBJ_DTYPE_STRING, null, false, 255);
-        $this->initVar('item_field_detail_id', XOBJ_DTYPE_STRING, null, true, 255);
+        $this->initVar('group_id', XOBJ_DTYPE_STRING, null, false, 191);
+        $this->initVar('item_field_detail_id', XOBJ_DTYPE_STRING, null, true, 191);
         $this->initVar('value', XOBJ_DTYPE_TEXT, null, false);
     }
 }

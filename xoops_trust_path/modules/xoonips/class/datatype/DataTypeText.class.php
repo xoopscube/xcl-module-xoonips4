@@ -36,7 +36,7 @@ class Xoonips_DataTypeText extends Xoonips_DataType
         $value = [];
         $essential = (1 == $field->getEssential()) ? 'NOT NULL' : '';
         $value[0] = ' text '.$essential;
-        $value[1] = '(255)';
+        $value[1] = '(191)';
 
         return $value;
     }

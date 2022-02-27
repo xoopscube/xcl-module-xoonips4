@@ -55,7 +55,7 @@ function listChange() {
     	<{if $itemfield.select=='1'}>
     	<input type="checkbox" name="checkbox_<{$itemfield.itemfieldid|xoops_escape}>" value="1" checked/>
     	<{else}>
-    	<input type="checkbox" name="checkbox_<{$itemfield.itemfieldid|xoops_escape}>" value="1" />
+    	<input type="checkbox" name="checkbox_<{$itemfield.itemfieldid|xoops_escape}>" value="1">
     	<{/if}>
     </td>
     <td style="text-align: left;"><{$itemfield.name|xoops_escape}>&nbsp;&nbsp;<{if $itemfield.editing ne ''}><span class="<{$dirname}>_diff"><{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_EDITING}></span><{/if}></td>
@@ -74,8 +74,8 @@ function listChange() {
 
 <div style="text-align: left">
 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>"
-	onclick="window.location='policy_itemgroup.php?op=edit&groupid=<{$groupid|xoops_escape}>'" />&nbsp;&nbsp;
- 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_OK}>" onclick="op.value='detailregistersave'; submit();" />
+	onclick="window.location='policy_itemgroup.php?op=edit&groupid=<{$groupid|xoops_escape}>'">&nbsp;&nbsp;
+ 	<input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_OK}>" onclick="op.value='detailregistersave'; submit();">
 </div>
 </form>
 <{include file="file:admin_footer.inc.html"}>

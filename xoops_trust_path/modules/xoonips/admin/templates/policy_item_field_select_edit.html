@@ -49,12 +49,13 @@ $(function() {
 </script>
 
 <form name="<{$xoops_dirname}>_policy_item_field_select_editform" id="<{$xoops_dirname}>_policy_item_field_select_editform" action="index.php" method="post">
-<input type="hidden" name="action" value="PolicyItemFieldSelectEdit" />
-<input type="hidden" name="name" value="<{$actionForm->get('name')|xoops_escape}>" />
+<input type="hidden" name="action" value="PolicyItemFieldSelectEdit">
+<input type="hidden" name="name" value="<{$actionForm->get('name')|xoops_escape}>">
 
 <{xoops_token form=$actionForm}>
 
-<table width="100%" cellspacing="1" class="outer">
+<table class="outer">
+    <thead>
   <tr>
     <th style="width: 20%;">
       <{"`$constpref`_POLICY_ITEM_FIELD_SELECT_NAME"|constant}>
@@ -62,15 +63,16 @@ $(function() {
     <td style="width: 80%;" class="even">
 <{if $isUsed}>
       <{$actionForm->get('select_name')|xoops_escape}>
-      <input type="hidden" name="select_name" value="<{$actionForm->get('select_name')|xoops_escape}>" />
+      <input type="hidden" name="select_name" value="<{$actionForm->get('select_name')|xoops_escape}>">
 <{else}>
-      <{xoops_input type=text name=select_name size=30 maxlength=255 value=$actionForm->get('select_name')}>
+      <{xoops_input type=text name=select_name size=30 maxlength=191 value=$actionForm->get('select_name')}>
 <{/if}>
     </td>
   </tr>
+    </thead>
 </table>
 
-<table width="100%" cellspacing="1" class="outer">
+<table class="outer">
   <thead>
   <tr>
     <th style="width: 30%;"><{"`$constpref`_POLICY_ITEM_FIELD_SELECT_LANG_VALUE_CODE"|constant}></th>
@@ -81,14 +83,14 @@ $(function() {
   <tbody class="sortable">
   <tr style="display: none;">
     <td>
-      <img class="handle" src="<{"icons/dragarea.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>" />
-      <input type="text" name="codes[]" size=30 maxlength=30 value="" />
+      <img class="handle" src="<{"icons/dragarea.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>">
+      <input type="text" name="codes[]" size=30 maxlength=30 value="">
     </td>
     <td>
-      <input type="text" name="names[]" size=60 maxlength=255 value="" />
+      <input type="text" name="names[]" size=60 maxlength=191 value="">
     </td>
     <td style="text-align: center;">
-      <img class="handle" src="<{"icons/move.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>" />
+      <img class="handle" src="<{"icons/move.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>">
       <img class="delete" src="<{"icons/delete.png"|theme}>" alt="<{"`$constpref`_LANG_DELETE"|constant}>" title="<{"`$constpref`_LANG_DELETE"|constant}> "/>
     </td>
   </tr>
@@ -97,19 +99,19 @@ $(function() {
 <{foreach item=code key=num from=$codes}>
   <tr class="<{cycle values='odd,even'}>">
     <td>
-      <img class="handle" src="<{"icons/dragarea.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>" />
+      <img class="handle" src="<{"icons/dragarea.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>">
 <{if $isUsed}>
       <{$code|xoops_escape}>
-      <input type="hidden" name="codes[]" value="<{$code|xoops_escape}>" />
+      <input type="hidden" name="codes[]" value="<{$code|xoops_escape}>">
 <{else}>
-      <input type="text" name="codes[]" size=30 maxlength=30 value="<{$code|xoops_escape}>" />
+      <input type="text" name="codes[]" size=30 maxlength=30 value="<{$code|xoops_escape}>">
 <{/if}>
     </td>
     <td>
-      <input type="text" name="names[]" size="60" maxlength="255" value="<{$names.$num|xoops_escape}>" />
+      <input type="text" name="names[]" size="60" maxlength="191" value="<{$names.$num|xoops_escape}>">
     </td>
     <td style="text-align: center;">
-      <img class="handle" src="<{"icons/move.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>" />
+      <img class="handle" src="<{"icons/move.png"|image}>" alt="<{"`$constpref`_LANG_MOVE"|constant}>" title="<{"`$constpref`_LANG_MOVE"|constant}>">
 <{if !$isUsed}>
       <img class="delete" src="<{"icons/delete.png"|theme}>" alt="<{"`$constpref`_LANG_DELETE"|constant}>" title="<{"`$constpref`_LANG_DELETE"|constant}> "/>
 <{/if}>
@@ -120,16 +122,16 @@ $(function() {
   <tfoot>
   <tr class="even">
     <td colspan="3" style="text-align: right;">
-      <input type="button" class="formButton addnew" value="<{"`$constpref`_LANG_ADDNEW"|constant}>" />
+      <input type="button" class="ui-btn addnew" value="<{"`$constpref`_LANG_ADDNEW"|constant}>">
     </td>
   </tr>
   </tfoot>
 </table>
 
 <div style="text-align: center; margin-top: 10px;">
-  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel">
   &nbsp;
-  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit" />
+  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit">
 </div>
 </form>
 

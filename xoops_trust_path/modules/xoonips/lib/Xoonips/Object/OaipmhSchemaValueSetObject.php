@@ -17,6 +17,6 @@ class OaipmhSchemaValueSetObject extends AbstractObject
         parent::__construct($dirname);
         $this->initVar('seq_id', XOBJ_DTYPE_INT, null, true);
         $this->initVar('schema_id', XOBJ_DTYPE_INT, 0, true);
-        $this->initVar('value', XOBJ_DTYPE_STRING, null, true, 255);
+        $this->initVar('value', XOBJ_DTYPE_STRING, null, true, 191);
     }
 }

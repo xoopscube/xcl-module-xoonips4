@@ -19,6 +19,6 @@ class ViewTypeObject extends AbstractObject
         $this->initVar('preselect', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('multi', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('name', XOBJ_DTYPE_STRING, null, true, 30);
-        $this->initVar('module', XOBJ_DTYPE_STRING, null, false, 255);
+        $this->initVar('module', XOBJ_DTYPE_STRING, null, false, 191);
     }
 }

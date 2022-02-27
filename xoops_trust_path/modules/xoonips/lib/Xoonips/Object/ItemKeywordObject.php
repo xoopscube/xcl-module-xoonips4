@@ -17,6 +17,6 @@ class ItemKeywordObject extends AbstractObject
         parent::__construct($dirname);
         $this->initVar('item_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('keyword_id', XOBJ_DTYPE_INT, 0, true);
-        $this->initVar('keyword', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('keyword', XOBJ_DTYPE_STRING, '', true, 191);
     }
 }

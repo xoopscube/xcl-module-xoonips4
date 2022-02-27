@@ -20,9 +20,9 @@ class ItemTypeObject extends AbstractObject
         $this->initVar('released', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('weight', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('name', XOBJ_DTYPE_STRING, null, true, 30);
-        $this->initVar('description', XOBJ_DTYPE_STRING, null, false, 255);
-        $this->initVar('icon', XOBJ_DTYPE_STRING, null, false, 255);
-        $this->initVar('mime_type', XOBJ_DTYPE_STRING, null, false, 255);
+        $this->initVar('description', XOBJ_DTYPE_STRING, null, false, 191);
+        $this->initVar('icon', XOBJ_DTYPE_STRING, null, false, 191);
+        $this->initVar('mime_type', XOBJ_DTYPE_STRING, null, false, 191);
         $this->initVar('template', XOBJ_DTYPE_TEXT, null, false);
         $this->initVar('update_id', XOBJ_DTYPE_INT, null, false);
     }

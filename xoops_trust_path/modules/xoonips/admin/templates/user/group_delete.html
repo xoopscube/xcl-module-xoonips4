@@ -16,12 +16,12 @@
 
 <div class="confirm">
 <{if $deleteRequired}>
-  <{"`$constpref`_USER_ERROR_GROUP_DELETE_REQUIRED"|constant}><br />
+  <{"`$constpref`_USER_ERROR_GROUP_DELETE_REQUIRED"|constant}><br>
 <{else}>
 <{if $isExtended}>
-  <{"`$constpref`_USER_LANG_GROUP_DELETE_ADVICE"|constant}><br />
+  <{"`$constpref`_USER_LANG_GROUP_DELETE_ADVICE"|constant}><br>
 <{else}>
-  <{$smarty.const._AD_USER_LANG_GROUP_DELETE_ADVICE}><br />
+  <{$smarty.const._AD_USER_LANG_GROUP_DELETE_ADVICE}><br>
 <{/if}>
   <{$smarty.const._AD_USER_LANG_GROUP_DELETE_ADVICE2}>
 <{/if}>
@@ -43,10 +43,10 @@
 <table class="outer">
   <tr>
 <{if $isExtended}>
-    <th colspan="2"><img src="<{"icons/group.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP}>" title="<{$smarty.const._AD_USER_LANG_GROUP}>" />
+    <th colspan="2"><img src="<{"icons/group.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP}>" title="<{$smarty.const._AD_USER_LANG_GROUP}>">
     <{"`$constpref`_USER_LANG_GROUP_DELETE"|constant}> (<{$object->getShow('name')|xoops_escape}>)</th>
 <{else}>
-    <th colspan="2"><img src="<{"icons/group.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP}>" title="<{$smarty.const._AD_USER_LANG_GROUP}>" /> <{$smarty.const._AD_USER_LANG_GROUP_DELETE}> (<{$object->getShow('name')|xoops_escape}>)</th>
+    <th colspan="2"><img src="<{"icons/group.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP}>" title="<{$smarty.const._AD_USER_LANG_GROUP}>"> <{$smarty.const._AD_USER_LANG_GROUP_DELETE}> (<{$object->getShow('name')|xoops_escape}>)</th>
 <{/if}>
   </tr>
   <tr>
@@ -72,9 +72,9 @@
   <tr>
     <td class="foot" colspan="2">
 <{if !$deleteRequired}>
-        <input class="formButton" type="submit" value="<{$smarty.const._DELETE}>" />
+        <input class="formButton" type="submit" value="<{$smarty.const._DELETE}>">
 <{/if}>
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
     </td>
   </tr>
 </table>

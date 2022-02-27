@@ -20,9 +20,9 @@
   <tr class= "<{cycle values='odd,even'}>">
     <td style="text-align: center;">
       <{if $group.select=='1'}>
-      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" checked <{if $group.preselect=='1'}>disabled<{/if}> />
+      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" checked <{if $group.preselect=='1'}>disabled<{/if}>>
       <{else}>
-      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" <{if $group.preselect=='1'}>disabled<{/if}> />
+      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" <{if $group.preselect=='1'}>disabled<{/if}>>
       <{/if}>
     </td>
     <td style="text-align: left;"><{$group.name|xoops_escape}></td>
@@ -40,7 +40,7 @@
 </table>
 
 <div style="text-align: left">
-  <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>" onclick="window.location='policy_itemtype.php?op=edit&itemtypeid=<{$base_itemtypeid|xoops_escape}>'" />&nbsp;&nbsp;
+  <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>" onclick="window.location='policy_itemtype.php?op=edit&itemtypeid=<{$base_itemtypeid|xoops_escape}>'">&nbsp;&nbsp;
    <input class="formButton" type="submit" value="<{$smarty.const._AM_XOONIPS_LABEL_OK}>">
 </div>
 </form>

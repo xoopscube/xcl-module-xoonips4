@@ -73,7 +73,7 @@ function doImport(){
       <{if ($itemtype.disdel)}>
       <a href="#">
         <img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._AM_XOONIPS_LABEL_DELETE}>" title="<{$smarty.const._AM_XOONIPS_LABEL_DELETE}>"
-        onclick="return dconfirm('policy_itemtype.php?op=delete&amp;itemtypeid=<{$itemtype.itemtypeid|xoops_escape}>')" />
+        onclick="return dconfirm('policy_itemtype.php?op=delete&amp;itemtypeid=<{$itemtype.itemtypeid|xoops_escape}>')">
       </a>
       <{/if}>
       <a href="policy_itemtype.php?op=export&amp;itemtypeid=<{$itemtype.itemtypeid|xoops_escape}>">
@@ -92,6 +92,6 @@ function doImport(){
   </tbody>
 </table>
 </form>
-<br />
+<br>
 <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
 <{include file="file:admin_footer.inc.html"}>

@@ -1,11 +1,17 @@
-<div id="user_breadcrumbs">
-  <a href="<{$xoops_url}>/"><{$smarty.const._MD_XOONIPS_LANG_HOME}></a>
-  <{foreach from=$xoops_breadcrumbs item="item"}>
-   &nbsp;&raquo;&raquo;&nbsp;
+<ul id="user_breadcrumbs" class="breadcrumb" aria-label="breadcrumb">
+    <li>
+        <a href="<{$xoops_url}>/">
+            <img class="svg home" src="<{$xoops_url}>/images/icons/home.svg" width="1em" height="1em" alt="Home"></a>
+    </li>
+    <li>
+        <a href="<{$xoops_url}>/"><{$smarty.const._MD_XOONIPS_LANG_HOME}></a>
+    </li>
+    <{foreach from=$xoops_breadcrumbs item="item"}>
     <{if $item.url}>
-      <a href="<{$item.url}>"><{$item.name|xoops_escape}></a>
+        <li><a href="<{$item.url}>"><{$item.name|xoops_escape}></a></li>
     <{else}>
-      <{$item.name|xoops_escape}>
+        <li aria-current="page"><{$item.name|xoops_escape}></li>
     <{/if}>
-  <{/foreach}>
-</div>
+    <{/foreach}>
+</ul>
+

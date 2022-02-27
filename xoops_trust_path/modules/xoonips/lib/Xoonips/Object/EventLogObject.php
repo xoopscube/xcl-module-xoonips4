@@ -19,7 +19,7 @@ class EventLogObject extends AbstractObject
         $this->initVar('event_type_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('timestamp', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('exec_uid', XOBJ_DTYPE_INT, null, false);
-        $this->initVar('remote_host', XOBJ_DTYPE_STRING, null, false, 255);
+        $this->initVar('remote_host', XOBJ_DTYPE_STRING, null, false, 191);
         $this->initVar('index_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('item_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('file_id', XOBJ_DTYPE_INT, null, false);

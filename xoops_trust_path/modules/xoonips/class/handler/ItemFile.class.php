@@ -16,13 +16,13 @@ class Xoonips_ItemFileObject extends XoopsSimpleObject
         $this->initVar('item_id', XOBJ_DTYPE_INT, null, true);
         $this->initVar('group_id', XOBJ_DTYPE_INT, null, true);
         $this->initVar('item_field_detail_id', XOBJ_DTYPE_INT, null, true);
-        $this->initVar('original_file_name', XOBJ_DTYPE_STRING, null, true, 255);
-        $this->initVar('mime_type', XOBJ_DTYPE_STRING, null, true, 255);
+        $this->initVar('original_file_name', XOBJ_DTYPE_STRING, null, true, 191);
+        $this->initVar('mime_type', XOBJ_DTYPE_STRING, null, true, 191);
         $this->initVar('file_size', XOBJ_DTYPE_INT, null, true);
-        $this->initVar('handle_name', XOBJ_DTYPE_STRING, null, false, 255);
-        $this->initVar('caption', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('handle_name', XOBJ_DTYPE_STRING, null, false, 191);
+        $this->initVar('caption', XOBJ_DTYPE_STRING, '', true, 191);
         $this->initVar('sess_id', XOBJ_DTYPE_STRING, null, false, 32);
-        $this->initVar('search_module_name', XOBJ_DTYPE_STRING, null, false, 255);
+        $this->initVar('search_module_name', XOBJ_DTYPE_STRING, null, false, 191);
         $this->initVar('search_module_version', XOBJ_DTYPE_INT, null, false);
         $this->initVar('timestamp', XOBJ_DTYPE_INT, null, true);
         $this->initVar('download_count', XOBJ_DTYPE_INT, 0, true);

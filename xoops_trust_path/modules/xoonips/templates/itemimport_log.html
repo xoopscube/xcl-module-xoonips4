@@ -7,14 +7,14 @@
 <div style="text-align:right; margin-left: 10px; margin-bottom: 10px;">
 </div>
 <form style="margin-top: 0px;" action="itemimport.php" method="post" enctype="multipart/form-data">
-<input type="hidden" name="op" value="" />
+<input type="hidden" name="op" value="">
 <table width="100%" cellspacing="1" class="outer">
   <tbody>
   <tr>
     <th style="text-align: left;"><{$smarty.const._MD_XOONIPS_ITEM_IMPORT_LOG_TIME}></th>
     <th style="text-align: center;"><{$smarty.const._MD_XOONIPS_ITEM_IMPORT_LOG_RESULT}></th>
     <th style="text-align: center;"><{$smarty.const._MD_XOONIPS_ITEM_IMPORT_LOG_ITEMS}></th>
-    <th style="text-align: center;"><br /></th>
+    <th style="text-align: center;"><br></th>
   </tr>
   <{foreach item=log from=$logs}>
   <tr class= "<{cycle values='odd,even'}>">

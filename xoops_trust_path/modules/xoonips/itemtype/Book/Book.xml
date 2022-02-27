@@ -96,7 +96,7 @@
    <xml>keyword</xml>
    <view_type_id>keyword</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -134,7 +134,7 @@
    <xml>name</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -153,7 +153,7 @@
    <xml>editor</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -172,7 +172,7 @@
    <xml>publisher_name</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>1</essential>
    <detail_target>1</detail_target>
@@ -229,7 +229,7 @@
    <xml>file</xml>
    <view_type_id>file upload</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>

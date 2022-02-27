@@ -19,7 +19,7 @@
       <{$smarty.const._AM_XOONIPS_LABEL_ITEMTYPE_DESCRIPTION}>
     </td>
     <td style="width: 75%; text-align: left;" class="even">&nbsp;&nbsp;
-      <input type="text" name="descrip" size="50" maxlength="255" value="<{$descrip|xoops_escape}>">
+      <input type="text" name="descrip" size="50" maxlength="191" value="<{$descrip|xoops_escape}>">
     </td>
   </tr>
   <tr>
@@ -61,9 +61,9 @@
   <tr class= "<{cycle values='odd,even'}>">
     <td style="text-align: center;">
       <{if $group.select=='1'}>
-      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" checked <{if $group.preselect=='1'}>disabled<{/if}> />
+      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" checked <{if $group.preselect=='1'}>disabled<{/if}>>
       <{else}>
-      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" <{if $group.preselect=='1'}>disabled<{/if}> />
+      <input type="checkbox" name="checkbox_<{$group.groupid|xoops_escape}>" value="1" <{if $group.preselect=='1'}>disabled<{/if}>>
       <{/if}>
     </td>
     <td style="text-align: left;"><{$group.name|xoops_escape}></td>
@@ -82,9 +82,9 @@
 <div style="text-align: right; margin-left: 10px; margin-bottom: 10px;">
 </div>
 <div style="text-align: left">
-  <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>" onclick="window.location='policy_itemtype.php'" />&nbsp;&nbsp;
-   <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_REGISTER}>" onclick="op.value='registersave'; mode.value=0; submit();" />&nbsp;&nbsp;
-  <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_RELEASE}>" onclick="op.value='registersave'; mode.value=1; submit();" />
+  <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_BACK}>" onclick="window.location='policy_itemtype.php'">&nbsp;&nbsp;
+   <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_REGISTER}>" onclick="op.value='registersave'; mode.value=0; submit();">&nbsp;&nbsp;
+  <input class="formButton" type="button" value="<{$smarty.const._AM_XOONIPS_LABEL_RELEASE}>" onclick="op.value='registersave'; mode.value=1; submit();">
 </div>
 </form>
 <{include file="file:admin_footer.inc.html"}>

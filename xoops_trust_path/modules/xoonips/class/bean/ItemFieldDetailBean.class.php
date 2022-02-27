@@ -519,9 +519,10 @@ class Xoonips_ItemFieldDetailBean extends Xoonips_BeanBase
      */
     public function updateTableName($detailId)
     {
+        // TODO check %\ sql update
         $table_name = $this->modulePrefix('item_extend').$detailId;
         $sql = 'UPDATE `'.$this->table.'` SET `table_name`='.Xoonips_Utils::convertSQLStr($table_name).' WHERE `item_field_detail_id`='.intval($detailId);
-        $sql .= ' AND `table_name` LIKE '.$this->dirname.'_item_extend%';
+        $sql .= ' AND `table_name` LIKE `'.$this->dirname.'_item_extend'.'%\'';
         $result = $this->execute($sql);
         if (!$result) {
             return false;

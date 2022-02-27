@@ -131,7 +131,7 @@
    <xml>author_id</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -159,7 +159,7 @@
    <xml>kana</xml>
    <view_type_id>kana</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -173,7 +173,7 @@
    <xml>romaji</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -187,7 +187,7 @@
    <xml>author_affiliation</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -201,7 +201,7 @@
    <xml>author_affiliation_translation</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -215,7 +215,7 @@
    <xml>author_role</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -229,7 +229,7 @@
    <xml>author_link</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -248,7 +248,7 @@
    <xml>edition</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -267,7 +267,7 @@
    <xml>place</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -286,7 +286,7 @@
    <xml>name</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -300,7 +300,7 @@
    <xml>kana</xml>
    <view_type_id>kana</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -314,7 +314,7 @@
    <xml>romaji</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -427,7 +427,7 @@
    <xml>name</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -455,7 +455,7 @@
    <xml>jtitle_volume</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -469,7 +469,7 @@
    <xml>jtitle_issue</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -483,7 +483,7 @@
    <xml>jtitle_year</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -497,7 +497,7 @@
    <xml>jtitle_month</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -511,7 +511,7 @@
    <xml>jtitle_spage</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -525,7 +525,7 @@
    <xml>jtitle_epage</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -582,7 +582,7 @@
    <xml>article_doi</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -677,7 +677,7 @@
    <xml>local</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -795,7 +795,7 @@
    <xml>keyword</xml>
    <view_type_id>keyword</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>
@@ -814,7 +814,7 @@
    <xml>ndc_classification</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -892,7 +892,7 @@
    <xml>genre</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -930,7 +930,7 @@
    <xml>image</xml>
    <view_type_id>preview</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -944,7 +944,7 @@
    <xml>caption</xml>
    <view_type_id>text</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>0</detail_target>
@@ -963,7 +963,7 @@
    <xml>file</xml>
    <view_type_id>file upload</view_type_id>
    <data_type_id>varchar</data_type_id>
-   <data_length>255</data_length>
+   <data_length>191</data_length>
    <data_decimal_places>-1</data_decimal_places>
    <essential>0</essential>
    <detail_target>1</detail_target>

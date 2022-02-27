@@ -17,6 +17,6 @@ class DataTypeObject extends AbstractObject
         parent::__construct($dirname);
         $this->initVar('data_type_id', XOBJ_DTYPE_INT, null, true);
         $this->initVar('name', XOBJ_DTYPE_STRING, null, true, 30);
-        $this->initVar('module', XOBJ_DTYPE_STRING, null, false, 255);
+        $this->initVar('module', XOBJ_DTYPE_STRING, null, false, 191);
     }
 }

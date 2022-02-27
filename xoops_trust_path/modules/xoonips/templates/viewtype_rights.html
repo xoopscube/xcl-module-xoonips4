@@ -1,31 +1,31 @@
 <{if $viewType eq 'input'}>
 	<table>
 	<tr>
-		<td><input type="radio" name="<{$rightsUseCC}>" value="1" <{$check_cc[1]}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');" /></td>
+		<td><input type="radio" name="<{$rightsUseCC}>" value="1" <{$check_cc[1]}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');"></td>
 		<td><{$smarty.const._MD_XOONIPS_RIGHTS_SOME_RIGHTS_RESERVED}></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td>
 			<ul>
-				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_COMMERCIAL_USE}><br />
+				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_COMMERCIAL_USE}><br>
 					<div style="padding-left: 20px;">
-					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="1" <{$check_com[1]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._YES}><br />
-					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="0" <{$check_com[0]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._NO}><br />
+					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="1" <{$check_com[1]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._YES}><br>
+					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="0" <{$check_com[0]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._NO}><br>
 					</div>
 				</li>
-				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_MODIFICATIONS}><br />
+				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_MODIFICATIONS}><br>
 					<div style="padding-left: 20px;">
-					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="2" <{$check_mod[2]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._YES}><br />
-					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="1" <{$check_mod[1]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._MD_XOONIPS_RIGHTS_YES_SA}><br />
-					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="0" <{$check_mod[0]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._NO}><br />
+					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="2" <{$check_mod[2]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._YES}><br>
+					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="1" <{$check_mod[1]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._MD_XOONIPS_RIGHTS_YES_SA}><br>
+					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="0" <{$check_mod[0]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._NO}><br>
 					</div>
 				</li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="<{$rightsUseCC|xoops_escape}>" value="0" <{$check_cc[0]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');" /></td>
+		<td><input type="radio" name="<{$rightsUseCC|xoops_escape}>" value="0" <{$check_cc[0]|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');"></td>
 		<td><{$smarty.const._MD_XOONIPS_RIGHTS_ALL_RIGHTS_RESERVED}></td>
 	</tr>
 	<tr>
@@ -38,14 +38,14 @@
 		</td>
 	</tr>
 	</table>
-	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" id="<{$fieldName|xoops_escape}>" />
+	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" id="<{$fieldName|xoops_escape}>">
 <{elseif $viewType eq 'confirm'}>
 	<{if $use_cc=='0'}>
 		<textarea readonly="readonly" rows="5" cols="40" style="width:320px;"><{$text|xoops_escape}></textarea>
 	<{else}>
 		<{$ccLicense}>
 	<{/if}>
-	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" id="<{$fieldName|xoops_escape}>" />
+	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" id="<{$fieldName|xoops_escape}>">
 <{elseif $viewType eq 'detail'}>
 	<{if $use_cc=='0'}>
 		<textarea readonly="readonly" rows="5" cols="40" style="width:320px;"><{$text|xoops_escape}></textarea>
@@ -53,35 +53,35 @@
 		<{$ccLicense}>
 	<{/if}>
 <{elseif $viewType eq 'search'}>
-	<input type="text" name="<{$fieldName|xoops_escape}>" size="50" value="" />
+	<input type="text" name="<{$fieldName|xoops_escape}>" size="50" value="">
 <{elseif $viewType eq 'default'}>
 	<table>
 	<tr>
-		<td><input type="radio" name="<{$rightsUseCC|xoops_escape}>" value="1" <{$check_cc[1]|xoops_escape}> <{$disabled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');" /></td>
+		<td><input type="radio" name="<{$rightsUseCC|xoops_escape}>" value="1" <{$check_cc[1]|xoops_escape}> <{$disabled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');"></td>
 		<td><{$smarty.const._MD_XOONIPS_RIGHTS_SOME_RIGHTS_RESERVED}></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td>
 			<ul>
-				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_COMMERCIAL_USE}><br />
+				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_COMMERCIAL_USE}><br>
 					<div style="padding-left: 20px;">
-					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="1" <{$check_com[1]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._YES}><br />
-					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="0" <{$check_com[0]|xoops_escape}> <{$disabled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._NO}><br />
+					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="1" <{$check_com[1]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._YES}><br>
+					<input type="radio" name="<{$rightsCCCommercialUse|xoops_escape}>" value="0" <{$check_com[0]|xoops_escape}> <{$disabled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(2, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._NO}><br>
 					</div>
 				</li>
-				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_MODIFICATIONS}><br />
+				<li><{$smarty.const._MD_XOONIPS_RIGHTS_ALLOW_MODIFICATIONS}><br>
 					<div style="padding-left: 20px;">
-					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="2" <{$check_mod[2]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._YES}><br />
-					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="1" <{$check_mod[1]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._MD_XOONIPS_RIGHTS_YES_SA}><br />
-					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="0" <{$check_mod[0]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');" /><{$smarty.const._NO}><br />
+					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="2" <{$check_mod[2]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._YES}><br>
+					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="1" <{$check_mod[1]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._MD_XOONIPS_RIGHTS_YES_SA}><br>
+					<input type="radio" name="<{$rightsCCModification|xoops_escape}>" value="0" <{$check_mod[0]|xoops_escape}> <{$disbaled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(3, this, '<{$fieldName|xoops_escape}>');"><{$smarty.const._NO}><br>
 					</div>
 				</li>
 			</ul>
 		</td>
 	</tr>
 	<tr>
-		<td><input type="radio" name="<{$rightsUseCC|xoops_escape}>" value="0" <{$check_cc[0]|xoops_escape}> <{$disabled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');" /></td>
+		<td><input type="radio" name="<{$rightsUseCC|xoops_escape}>" value="0" <{$check_cc[0]|xoops_escape}> <{$disabled|xoops_escape}> onclick="<{$dirname}>Edit.changeRightsRadioBox(1, this, '<{$fieldName|xoops_escape}>');"></td>
 		<td><{$smarty.const._MD_XOONIPS_RIGHTS_ALL_RIGHTS_RESERVED}></td>
 	</tr>
 	<tr>
@@ -94,5 +94,5 @@
 		</td>
 	</tr>
 	</table>
-	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" id="<{$fieldName|xoops_escape}>" />
+	<input type="hidden" name="<{$fieldName|xoops_escape}>" value="<{$value|xoops_escape}>" id="<{$fieldName|xoops_escape}>">
 <{/if}>

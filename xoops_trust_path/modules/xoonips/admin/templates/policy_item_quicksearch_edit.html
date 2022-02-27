@@ -10,8 +10,8 @@ $(document).ready(function () {
 <{include file="file:admin_header.inc.html"}>
 
 <form name="<{$xoops_dirname}>_policy_item_quicksearchform" id="<{$xoops_dirname}>_policy_item_quicksearchform" action="index.php" method="post">
-<input type="hidden" name="action" value="PolicyItemQuickSearchEdit" />
-<input type="hidden" name="condition_id" value="<{$actionForm->get('condition_id')|xoops_escape}>" />
+<input type="hidden" name="action" value="PolicyItemQuickSearchEdit">
+<input type="hidden" name="condition_id" value="<{$actionForm->get('condition_id')|xoops_escape}>">
 
 <{xoops_token form=$actionForm}>
 <table width="100%" cellspacing="1" class="outer">
@@ -20,7 +20,7 @@ $(document).ready(function () {
       <{"`$constpref`_POLICY_ITEM_QUICKSEARCH_LABEL"|constant}>
     </th>
     <td style="width: 80%;" class="even">
-      <input type="text" name="condition_name" size="30" maxlength="255" value="<{$actionForm->get('condition_name')|xoops_escape}>" />
+      <input type="text" name="condition_name" size="30" maxlength="191" value="<{$actionForm->get('condition_name')|xoops_escape}>">
     </td>
   </tr>
 </table>
@@ -35,7 +35,7 @@ $(document).ready(function () {
 <{foreach item=itemFieldObject from=$itemFieldObjects}>
   <tr class= "<{cycle values='odd,even'}>">
     <td style="text-align: center;">
-      <input type="checkbox" name="itemFieldIds[]" value="<{$itemFieldObject->get('item_field_detail_id')|xoops_escape}>"<{if in_array($itemFieldObject->get('item_field_detail_id'), $actionForm->get('itemFieldIds'))}> checked="checked"<{/if}> />
+      <input type="checkbox" name="itemFieldIds[]" value="<{$itemFieldObject->get('item_field_detail_id')|xoops_escape}>"<{if in_array($itemFieldObject->get('item_field_detail_id'), $actionForm->get('itemFieldIds'))}> checked="checked"<{/if}>>
     </td>
     <td style="text-align: left;">
       <{$itemFieldObject->getShow('name')|xoops_escape}>
@@ -58,9 +58,9 @@ $(document).ready(function () {
 </table>
 
 <div style="text-align: center; margin-top: 10px;">
-  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel">
   &nbsp;
-  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit" />
+  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit">
 </div>
 </form>
 

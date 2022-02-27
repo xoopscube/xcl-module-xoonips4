@@ -115,11 +115,11 @@
           <{/foreach}>
         </select>
       <{if $dk>0 || $sk>0}>
-         <a href="#" onclick="del('<{$schema.schema_id|xoops_escape}>_<{$dk|xoops_escape}>_<{$sk|xoops_escape}>')"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._AM_XOONIPS_LABEL_DELETE}>" title="<{$smarty.const._AM_XOONIPS_LABEL_DELETE}>" /></a>
+         <a href="#" onclick="del('<{$schema.schema_id|xoops_escape}>_<{$dk|xoops_escape}>_<{$sk|xoops_escape}>')"><img src="<{$xoops_url}>/modules/<{$dirname}>/image.php/icons/delete.png" alt="<{$smarty.const._AM_XOONIPS_LABEL_DELETE}>" title="<{$smarty.const._AM_XOONIPS_LABEL_DELETE}>"></a>
       <{/if}>
       <{/foreach}>
       <{if $schema.hasValueSet==false}>
-      <br />
+      <br>
       <input type="checkbox" name="checkbox_<{$schema.schema_id|xoops_escape}>_<{$dk|xoops_escape}>" value="1" <{if $data.checkbox==1}>checked="checked"<{/if}>/>
       <input type="text" size="80" value="<{$data.text|xoops_escape}>" name="text_<{$schema.schema_id|xoops_escape}>_<{$dk|xoops_escape}>"/><br/>
       <input type="submit" value="<{$smarty.const._AM_XOONIPS_LABEL_JOIN}>" onclick="join('<{$schema.schema_id|xoops_escape}>_<{$dk|xoops_escape}>')"/>
@@ -133,8 +133,8 @@
       <{/foreach}>
       </select>
       <{if $schema.hasValueSet==false}>
-        <br />
-        <input type="checkbox" name="checkbox_<{$schema.schema_id|xoops_escape}>_0" value="1" />
+        <br>
+        <input type="checkbox" name="checkbox_<{$schema.schema_id|xoops_escape}>_0" value="1">
         <input type="text" size="80" value="" name="text_<{$schema.schema_id|xoops_escape}>_0"/><br/>
         <input type="submit" value="<{$smarty.const._AM_XOONIPS_LABEL_JOIN}>" onclick="join('<{$schema.schema_id|xoops_escape}>_0')"/>
       <{/if}>

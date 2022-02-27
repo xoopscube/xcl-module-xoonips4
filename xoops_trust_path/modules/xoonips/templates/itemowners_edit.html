@@ -21,7 +21,7 @@ $('#<{$dirname}>_itemownerseditform :button[rel^="<{$mytrustdirname}>Popin"]').<
 <{$errors}>
 <form id="<{$dirname}>_itemownerseditform" action="edit.php" name="<{$dirname}>_itemownerseditform" method="post">
 <{$token_ticket}>
-<input type="hidden" name="item_id" value="<{$item_id|xoops_escape}>" />
+<input type="hidden" name="item_id" value="<{$item_id|xoops_escape}>">
 <{$item_html}>
 <table>
 <tr>
@@ -32,7 +32,7 @@ $('#<{$dirname}>_itemownerseditform :button[rel^="<{$mytrustdirname}>Popin"]').<
 </tr>
 </table>
 <div style="text-align: center; margin-top: 20px;">
-	<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_UPDATE_BUTTON_LABEL}>" onclick="document.<{$dirname}>_itemownerseditform.action='edit.php?op=saveOwners'; submit();return false;" />
+	<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_UPDATE_BUTTON_LABEL}>" onclick="document.<{$dirname}>_itemownerseditform.action='edit.php?op=saveOwners'; submit();return false;">
 </div>
 </form>
 <{include file="db:`$dirname`_footer.html"}>

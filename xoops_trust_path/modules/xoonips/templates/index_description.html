@@ -41,13 +41,13 @@ function back(back) {
 <{foreach item=index from=$index_path}>
  / <a href="<{$itemListUrl}>?index_id=<{$index.index_id|xoops_escape}>"><{$index.html_title|xoops_escape}></a>
 <{/foreach}>&nbsp;&nbsp;
-<br />
+<br>
 <{$errors}>
 <form id="<{$dirname}>_indexDescriptionForm" name="<{$dirname}>_indexDescriptionForm" action="indexdescription.php?op=update" method="post" enctype="multipart/form-data">
 <{$token_ticket}>
-<input type="hidden" id="<{$dirname}>_action" name="action" value="" />
-<input type="hidden" id="<{$dirname}>_index_id" name="index_id" value="<{$index_id|xoops_escape}>" />
-<input type="hidden" id="<{$dirname}>_show_thumbnail" name="show_thumbnail" value="<{$show_thumbnail|xoops_escape}>" />
+<input type="hidden" id="<{$dirname}>_action" name="action" value="">
+<input type="hidden" id="<{$dirname}>_index_id" name="index_id" value="<{$index_id|xoops_escape}>">
+<input type="hidden" id="<{$dirname}>_show_thumbnail" name="show_thumbnail" value="<{$show_thumbnail|xoops_escape}>">
 <table class="outer" cellspacing="1" cellpadding="4">
  <tr>
   <td width="40%" class="head"><{$smarty.const._MD_XOONIPS_INDEX_NAME}><span style="color: red;">*</span></td>
@@ -55,24 +55,24 @@ function back(back) {
    <{if $root_dir }>
     <{$title|xoops_escape}>
    <{else}>
-    <input type="text" id="<{$dirname}>_title" name="title" size="50" value="<{$title|xoops_escape}>" />
+    <input type="text" id="<{$dirname}>_title" name="title" size="50" value="<{$title|xoops_escape}>">
    <{/if}>
   </td>
  </tr>
  <tr>
   <td width="40%" class="head"><{$smarty.const._MD_XOONIPS_INDEX_TITLE}></td>
   <td width="60%" class="<{cycle name="oddeven" values="odd,even"}>">
-    <input type="text" id="<{$dirname}>_detailed_title" name="detailed_title" size="50" value="<{$detailed_title|xoops_escape}>" />
+    <input type="text" id="<{$dirname}>_detailed_title" name="detailed_title" size="50" value="<{$detailed_title|xoops_escape}>">
   </td>
  </tr>
  <tr>
-  <td class="head"><{$smarty.const._MD_XOONIPS_INDEX_DETAILED_DESCRIPTION_ICON}><br /></td>
+  <td class="head"><{$smarty.const._MD_XOONIPS_INDEX_DETAILED_DESCRIPTION_ICON}><br></td>
   <td class="<{cycle name="oddeven"}>">
-   <input type="file" name="filepath" size="40" /><br />
+   <input type="file" name="filepath" size="40"><br>
    <div id="<{$dirname}>_icon">
    <{if $show_thumbnail eq 1}>
-      <img src="<{$thumbnail|xoops_escape}>" alt="<{$icon|xoops_escape}>" width="150px" />
-      <input type="button" value="<{$smarty.const._DELETE}>" onclick="deleteIcon()" />
+      <img src="<{$thumbnail|xoops_escape}>" alt="<{$icon|xoops_escape}>" width="150px">
+      <input type="button" value="<{$smarty.const._DELETE}>" onclick="deleteIcon()">
    <{/if}>
    </div>
   </td>
@@ -85,9 +85,9 @@ function back(back) {
  </tr>
 </table>
 <div style="text-align: center">
- <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_UPDATE}>" onclick="update()" />
- <input type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_DELETE_BUTTON_LABEL}>" onclick="deleteConfirm()" />
- <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_BACK}>" onclick="back('<{$back|xoops_escape}>')" />
+ <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_UPDATE}>" onclick="update()">
+ <input type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_DELETE_BUTTON_LABEL}>" onclick="deleteConfirm()">
+ <input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_BACK}>" onclick="back('<{$back|xoops_escape}>')">
 </div>
 </form>
 <{include file="db:`$dirname`_footer.html"}>

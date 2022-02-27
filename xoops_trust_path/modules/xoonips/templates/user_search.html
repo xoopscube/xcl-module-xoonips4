@@ -18,14 +18,14 @@
 <table class="outer">
 <tr>
 <td class="head"><{$smarty.const._MD_XOONIPS_USER_UNAME_LABEL}></td>
-<td class="even"><input type="text" value="<{$uname|xoops_escape}>" name="uname" /></td>
+<td class="even"><input type="text" value="<{$uname|xoops_escape}>" name="uname"></td>
 </tr>
 <tr>
 <td class="head"><{$smarty.const._MD_XOONIPS_USER_NAME_LABEL}></td>
-<td class="even"><input type="text" value="<{$name|xoops_escape}>" name="name" /></td>
+<td class="even"><input type="text" value="<{$name|xoops_escape}>" name="name"></td>
 </tr>
 
 </table>
-<input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_SEARCH}>" onclick="this.form.action='user.php?op=userSearch&action=search';this.form.submit();" />
+<input type="button" value="<{$smarty.const._MD_XOONIPS_LANG_SEARCH}>" onclick="this.form.action='user.php?op=userSearch&action=search';this.form.submit();">
 </form>
 <{include file="db:`$dirname`_user_footer.html"}>

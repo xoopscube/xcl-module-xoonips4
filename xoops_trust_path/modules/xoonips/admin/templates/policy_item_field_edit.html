@@ -148,7 +148,7 @@ $('#legacy_xoopsform_list_select').change(function() {
 <{include file="file:admin_header.inc.html"}>
 
 <form name="<{$xoops_dirname}>_policy_item_field_editform" id="<{$xoops_dirname}>_policy_item_field_editform" action="index.php?action=PolicyItemFieldEdit" method="post">
-<input type="hidden" name="field_id" value="<{$actionForm->get('field_id')|xoops_escape}>" />
+<input type="hidden" name="field_id" value="<{$actionForm->get('field_id')|xoops_escape}>">
 
 <{xoops_token form=$actionForm}>
 <table width="100%" cellspacing="1" class="outer">
@@ -163,7 +163,7 @@ $('#legacy_xoopsform_list_select').change(function() {
       <{"`$constpref`_LANG_ITEM_FIELD_ID"|constant}><{"`$constpref`_LANG_REQUIRED_MARK"|constant}>
     </th>
     <td style="width: 80%;" class="even">
-      <{xoops_input type=text name=xml size=30 maxlength=255 value=$actionForm->get('xml')|xoops_escape}>
+      <{xoops_input type=text name=xml size=30 maxlength=191 value=$actionForm->get('xml')|xoops_escape}>
     </td>
   </tr>
   <tr>
@@ -171,7 +171,7 @@ $('#legacy_xoopsform_list_select').change(function() {
       <{"`$constpref`_LANG_ITEM_FIELD_NAME"|constant}><{"`$constpref`_LANG_REQUIRED_MARK"|constant}>
     </th>
     <td class="even">
-      <{xoops_input type=text name=name size=30 maxlength=255 value=$actionForm->get('name')|xoops_escape}>
+      <{xoops_input type=text name=name size=30 maxlength=191 value=$actionForm->get('name')|xoops_escape}>
     </td>
   </tr>
   <tr>
@@ -274,7 +274,7 @@ $('#legacy_xoopsform_list_select').change(function() {
     <td class="even">
       <{"`$constpref`_LANG_ITEM_FIELD_OTHER_DISPLAY"|constant}>
       <{xoops_input type=checkbox name=detail_display value=1 default=$actionForm->get('detail_display')}>
-      <br />&nbsp;&raquo;
+      <br>&nbsp;&raquo;
       <{"`$constpref`_POLICY_ITEM_FIELD_OTHER_DISPLAY_DESC"|constant}>
     </td>
   </tr>
@@ -282,7 +282,7 @@ $('#legacy_xoopsform_list_select').change(function() {
     <td class="even">
       <{"`$constpref`_LANG_ITEM_FIELD_OTHER_DETAIL_SEARCH"|constant}>
       <{xoops_input type=checkbox name=detail_target value=1 default=$actionForm->get('detail_target')}>
-      <br />&nbsp;&raquo;
+      <br>&nbsp;&raquo;
       <{"`$constpref`_POLICY_ITEM_FIELD_OTHER_DETAIL_SEARCH_DESC"|constant}>
     </td>
   </tr>
@@ -290,7 +290,7 @@ $('#legacy_xoopsform_list_select').change(function() {
     <td class="even">
       <{"`$constpref`_LANG_ITEM_FIELD_OTHER_SCOPE_SEARCH"|constant}>
       <{xoops_input type=checkbox name=scope_search value=1 default=$actionForm->get('scope_search')}>
-      <br />&nbsp;&raquo;
+      <br>&nbsp;&raquo;
       <{"`$constpref`_POLICY_ITEM_FIELD_OTHER_SCOPE_SEARCH_DESC"|constant}>
     </td>
   </tr>
@@ -305,12 +305,12 @@ $('#legacy_xoopsform_list_select').change(function() {
 </table>
 
 <div style="text-align: center; margin-top: 10px;">
-  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
+  <input type="submit" class="formButton" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel">
   &nbsp;
-  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit" />
+  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_SAVE"|constant}>" name="submit">
 <{if $object->get('item_field_detail_id') != 0 }>
   &nbsp;
-  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_RELEASE"|constant}>" name="release" />
+  <input type="submit" class="formButton" value="<{"`$constpref`_LANG_RELEASE"|constant}>" name="release">
 <{/if}>
 </div>
 

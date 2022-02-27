@@ -7,7 +7,7 @@ function headText(str){
 }
 
 function nl2br(str){
-    return str.replace(/\n/, ' <br /> ');
+    return str.replace(/\n/, ' <br> ');
 }
 
 function clickOK(){
@@ -124,24 +124,24 @@ function getTextFromOpener(){
 <tr>
 <td class="head"><{$displayName|xoops_escape}></td>
 <td class="even">
-<input type="hidden" name="elementId" value="<{$elementId|xoops_escape}>" id="<{$dirname}>_ElementId" />
-<input type="hidden" name="name" value="<{$name|xoops_escape}>" id="<{$dirname}>_Name" />
-<input type="hidden" name="elementId" value="<{$elementId|xoops_escape}>" id="<{$dirname}>_ElementId" />
-<input type="file" name="file" />
-<input class="formButton" type="submit" name="" value="<{$smarty.const._MD_XOONIPS_ITEM_UPLOAD_LABEL}>" />
-<br />
+<input type="hidden" name="elementId" value="<{$elementId|xoops_escape}>" id="<{$dirname}>_ElementId">
+<input type="hidden" name="name" value="<{$name|xoops_escape}>" id="<{$dirname}>_Name">
+<input type="hidden" name="elementId" value="<{$elementId|xoops_escape}>" id="<{$dirname}>_ElementId">
+<input type="file" name="file">
+<input class="formButton" type="submit" name="" value="<{$smarty.const._MD_XOONIPS_ITEM_UPLOAD_LABEL}>">
+<br>
 <{if ($errorMessage)}>
 <div style="color:red; font-weight:bold;">;
     <{$errorMessage|xoops_escape}>
 </div>;
 <{/if}>
-<br />
+<br>
 <textarea name="text" id="<{$dirname}>_Text" cols="37" rows="8" style="width:296px;">
     <{$text|xoops_escape}>
 </textarea>
-<br />
-<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_OK_LABEL}>" onclick="clickOK()" />
-<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_CANCEL_LABEL}>" onclick="clickCancel()" />
+<br>
+<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_OK_LABEL}>" onclick="clickOK()">
+<input class="formButton" type="button" value="<{$smarty.const._MD_XOONIPS_ITEM_CANCEL_LABEL}>" onclick="clickCancel()">
 </td>
 </tr>
 </table>

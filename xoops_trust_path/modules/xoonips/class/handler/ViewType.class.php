@@ -14,7 +14,7 @@ class Xoonips_ViewTypeObject extends XoopsSimpleObject
         $this->initVar('preselect', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('multi', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('name', XOBJ_DTYPE_STRING, '', true, 30);
-        $this->initVar('module', XOBJ_DTYPE_STRING, '', true, 255);
+        $this->initVar('module', XOBJ_DTYPE_STRING, '', true, 191);
     }
 
     /**

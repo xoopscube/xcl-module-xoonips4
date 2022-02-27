@@ -3,7 +3,7 @@
 		xoonipsCallback('<{$callbackid|xoops_escape}>', '<{$callbackvalue|xoops_escape}>');
 	</script>
 <{else}>
-	<br /><br />
+	<br><br>
 	<{if $messages}>
 		<span style="color: black;">
 		<ul>
@@ -30,14 +30,14 @@
 		<{/foreach}>
 		</ul>
 		</span>
-	<{/if}><br />
+	<{/if}><br>
 	<div style="text-align:center;">
 	<{if $errors}>
-		<input type="button" rel="close" value="OK" />
+		<input type="button" rel="close" value="OK">
 	<{else}>
-		<input type="hidden" id="<{$dirname}>_callbackid"  name="callbackid" value="<{$callbackid|xoops_escape}>" />
-		<input type="hidden" id="<{$dirname}>_callbackvalue" name="callbackvalue" value="<{$callbackvalue|xoops_escape}>" />
-		<input type="button" id="<{$dirname}>_sub_msg_ok" rel="callback" value="OK" />
+		<input type="hidden" id="<{$dirname}>_callbackid"  name="callbackid" value="<{$callbackid|xoops_escape}>">
+		<input type="hidden" id="<{$dirname}>_callbackvalue" name="callbackvalue" value="<{$callbackvalue|xoops_escape}>">
+		<input type="button" id="<{$dirname}>_sub_msg_ok" rel="callback" value="OK">
 	<{/if}>
 	</div>
 <{/if}>
