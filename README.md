@@ -4,7 +4,7 @@
 
 ## ///// — XooNIps 4 :: Base Platform System
 
-![alt text](https://repository-images.githubusercontent.com/461634439/038a5641-d653-4d78-ba55-898667ae7374)
+![alt text](https://repository-images.githubusercontent.com/347963527/8c04d798-5562-4443-8e55-656298649e6f)
 
 
 MODULE | XooNIps 4
@@ -41,7 +41,14 @@ License | GPL
   1. Fail to update sql
   2. InnoDB, set max 191 (255)
   3. Commented out update - installed successfully
-- Add Trust_Path /uploads/xoonips/
+- Tree (new item)
+- Add Trust_Path /uploads/xoonips/  
+- Remove whitespace (empty space in Smarty vars) 
+
+**Note for next release :**
+{something} is a Smarty tag
+{ something } is not interpreted by Smarty, for example in Javascript code
+
 
 **Administration Dashboard** 
 
@@ -50,12 +57,14 @@ License | GPL
 - Fix open groupAdmins
 
 **Settings** 
+
 - populate DB with samples
 - Site Policies
 - Maximum Disk Space for Private Items [MB] ( differs on front-end edition - 0/2047.9999990463 ? )  
 - Only variables should be assigned by reference in class/handler/ItemField.class.php 
 
-SQL issues 
+**SQL issues**
+
 - if create group Fail to INSERT INTO _xoonips_index Column count doesn't match value count at row 1
 - Changed some templates to X-Layout/CSS
 
